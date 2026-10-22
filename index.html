@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCU Economics Midterm Hub — Повна підготовка з нуля за 12 годин</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient-glow"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="#" class="logo-group">
+        <div class="logo-badge">UCU ECON</div>
+        <div class="logo-text">
+          <h1>Midterm Prep Hub</h1>
+          <p>Курс 1028 • Теорія ігор та бізнес-стратегія</p>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="#roadmap">12-Годинний План</a>
+        <a href="#theory">Теорія "Без Води"</a>
+        <a href="#problems">Розбір 10 Задач</a>
+        <a href="#podcasts">Подкасти (NotebookLM)</a>
+        <a href="#videos">Відео-Уроки</a>
+        <a href="#tools">Калькулятори</a>
+        <a href="#cheatsheet">Шпора</a>
+        <a href="#quiz">Бліц-Тест</a>
+      </nav>
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Світла тема</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-wrapper">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="badge-tag">
+        <span>⚡ Експрес-підготовка до мідтерму в понеділок</span>
+      </div>
+      <h1 class="hero-title">Повна підготовка з економіки<br>від 0 до 100% за 12 годин</h1>
+      <p class="hero-subtitle">
+        Якщо ти нічого не розв'язував протягом модулю — не панікуй. Тут зібрано все: 
+        покроковий 12-годинний план, детальний розбір кожної задачі екзамену, вбудовані аудіо-подкасти з NotebookLM українською та інтерактивні розв'язувачі. 
+        <b>Мінімум води, максимум математики та логіки.</b>
+      </p>
+
+      <!-- Quick Stats -->
+      <div class="stats-bar">
+        <div class="stat-card">
+          <div class="stat-icon blue">⏱️</div>
+          <div class="stat-info">
+            <h3>12 Годин</h3>
+            <p>Чіткий таймлайн до понеділка</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon emerald">🎯</div>
+          <div class="stat-info">
+            <h3>10 Задач</h3>
+            <p>100% реальні завдання курсу</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon amber">🎙️</div>
+          <div class="stat-info">
+            <h3>6 Подкастів</h3>
+            <p>The Art of Strategy українською</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon purple">🧠</div>
+          <div class="stat-info">
+            <h3>PARTS & Неш</h3>
+            <p>Головні концепції курсу</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12-Hour Study Tracker -->
+    <section class="progress-panel">
+      <div class="progress-header">
+        <div class="progress-title">
+          <span>🚀 Твій трекер підготовки</span>
+        </div>
+        <div id="progressCount" class="progress-counter">0 з 12 годин (0%)</div>
+      </div>
+      <div class="progress-track">
+        <div id="progressFill" class="progress-fill"></div>
+      </div>
+      <div class="hour-pills">
+        <div class="hour-pill" data-hour="1"><span>ГОД 1</span><span>Неш & Матриці</span></div>
+        <div class="hour-pill" data-hour="2"><span>ГОД 2</span><span>Домінування</span></div>
+        <div class="hour-pill" data-hour="3"><span>ГОД 3</span><span>Дилема в'язня</span></div>
+        <div class="hour-pill" data-hour="4"><span>ГОД 4</span><span>Grim Trigger</span></div>
+        <div class="hour-pill" data-hour="5"><span>ГОД 5</span><span>Дерева рішень</span></div>
+        <div class="hour-pill" data-hour="6"><span>ГОД 6</span><span>Rollback & Погрози</span></div>
+        <div class="hour-pill" data-hour="7"><span>ГОД 7</span><span>Value Net</span></div>
+        <div class="hour-pill" data-hour="8"><span>ГОД 8</span><span>Фреймворк PARTS</span></div>
+        <div class="hour-pill" data-hour="9"><span>ГОД 9</span><span>Змішані стратегії</span></div>
+        <div class="hour-pill" data-hour="10"><span>ГОД 10</span><span>Готелі & Аукціони</span></div>
+        <div class="hour-pill" data-hour="11"><span>ГОД 11</span><span>Симуляція іспиту</span></div>
+        <div class="hour-pill" data-hour="12"><span>ГОД 12</span><span>Фінальна шпора</span></div>
+      </div>
+    </section>
+
+    <!-- SECTION: 12-HOUR ROADMAP -->
+    <section id="roadmap">
+      <div class="section-head">
+        <span class="section-head-badge">СТРАТЕГІЧНИЙ ПЛАН</span>
+        <h2>12-Годинний Графік Підготовки (З нуля до мідтерму)</h2>
+        <p>Розподіли цей план на вихідні або займайся інтенсивними блоками. Кожен блок дає закінчену навичку для розв'язання екзаменаційних задач.</p>
+      </div>
+
+      <div class="roadmap-timeline">
+        <!-- Block 1 -->
+        <div class="roadmap-block block-1">
+          <div class="roadmap-block-header">
+            <span class="block-time">⏰ ГОДИНИ 1–2 • БЛОК 1</span>
+            <label class="block-checkbox-wrapper">
+              <input type="checkbox" class="block-checkbox" data-block="1">
+              <span>Виконано</span>
+            </label>
+          </div>
+          <div class="roadmap-block-content">
+            <h3>Матричні ігри, Домінантні стратегії та Рівновага Неша</h3>
+            <p>Фундамент усієї теорії ігор. Вчимося читати матриці, находити кращі відповіді (best response) та відкидати завідомо програшні варіанти.</p>
+            <div class="roadmap-meta-grid">
+              <div class="roadmap-meta-item">
+                <strong>🎧 Слухати подкаст:</strong>
+                <span>Розділ 4 «Прекрасна рівновага» (16 хв)</span>
+              </div>
+              <div class="roadmap-meta-item">
+                <strong>🎯 Задачі для практики:</strong>
+                <span>Задача 1 (Mork & Mindy), Задача 4 (3x3 матриця), Задача 9</span>
+              </div>
+              <div class="roadmap-meta-item">
+                <strong>🔑 Ключовий скіл:</strong>
+                <span>Метод стрілочок/підкреслювання для пошуку рівноваги Неша за 30 секунд</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="roadmap-block block-2">
+          <div class="roadmap-block-header">
+            <span class="block-time">⏰ ГОДИНИ 3–4 • БЛОК 2</span>
+            <label class="block-checkbox-wrapper">
+              <input type="checkbox" class="block-checkbox" data-block="2">
+              <span>Виконано</span>
+            </label>
+          </div>
+          <div class="roadmap-block-content">
+            <h3>Дилема в'язня, Повторювані ігри та Grim Trigger</h3>
+            <p>Чому егоїсти зазнають фіаско і як нескінченні повторення рятують співпрацю. Математика дисконт-фактора δ, процентної ставки r та ефект затримки покарання.</p>
+            <div class="roadmap-meta-grid">
+              <div class="roadmap-meta-item">
+                <strong>🎧 Слухати подкаст:</strong>
+                <span>Розділ 3 «Дилема в'язня та як її подолати» (15 хв)</span>
+              </div>
+              <div class="roadmap-meta-item">
+                <strong>🎯 Задачі для практики:</strong>
+                <span>Задача 2 (Joint Venture), Задача 7 (Обмін частками фірм), Задача 8 (Реклама Colgate)</span>
+              </div>
+              <div class="roadmap-meta-item">
+                <strong>🔑 Ключовий скіл:</strong>
+                <span>Розрахунок формули δ ≥ (T-R)/(T-P) та зміна гри через обмін частками (equity swap)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="roadmap-block block-3">
+          <div class="roadmap-block-header">
+            <span class="block-time">⏰ ГОДИНИ 5–6 • БЛОК 3</span>
+            <label class="block-checkbox-wrapper">
+              <input type="checkbox" class="block-checkbox" data-block="3">
+              <span>Виконано</span>
+            </label>
+          </div>
+          <div class="roadmap-block-content">
+            <h3>Послідовні ігри, Дерева рішень та Зворотна індукція (Rollback)</h3>
+            <p>Правило 1 Діксіта-Нейлбаффа: «Дивись уперед, міркуй назад». Розв'язання дерев рішень, аналіз ходів конкурента наперед, достовірність погроз та вхід на ринок.</p>
+            <div class="roadmap-meta-grid">
+              <div class="roadmap-meta-item">
+                <strong>🎧 Слухати подкаст:</strong>
+                <span>Розділ 2 «Зворотне міркування» (18 хв) + Розділ 6 «Стратегічні ходи» (18 хв)</span>
+              </div>
+              <div class="roadmap-meta-item">
+                <strong>🎯 Задачі для практики:</strong>
+                <span>Задача 3 (Ресторан Макса і Саллі), Задача 10 (British Airways vs Lufthansa)</span>
+              </div>
+              <div class="roadmap-meta-item">
+                <strong>🔑 Ключовий скіл:</strong>
+                <span>Побудова Game Tree та відсікання недостовірних погроз через підігрову досконалу рівновагу (SPNE)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 4 -->
+        <div class="roadmap-block block-4">
+          <div class="roadmap-block-header">
+            <span class="block-time">⏰ ГОДИНИ 7–8 • БЛОК 4</span>
+            <label class="block-checkbox-wrapper">
+              <input type="checkbox" class="block-checkbox" data-block="4">
+              <span>Виконано</span>
+            </label>
+          </div>
+          <div class="roadmap-block-content">
+            <h3>Бізнес-стратегія: Модель PARTS та Value Net (Сітка вартості)</h3>
+            <p>Основа статті Harvard Business Review «The Right Game». Як компанії змінюють правила гри, хто такі комплементори і чому ніхто не може взяти з гри більше за свою додану вартість.</p>
+            <div class="roadmap-meta-grid">
+              <div class="roadmap-meta-item">
+                <strong>📄 Читати конспект:</strong>
+                <span>Value Net (Клієнти, Постачальники, Конкуренти, Комплементори) + PARTS</span>
+              </div>
+              <div class="roadmap-meta-item">
+                <strong>🎯 Задачі для практики:</strong>
+                <span>Кейс LNU/LPNU (Faculty Grant Track & Industry co-employer), Кейс NutraSweet</span>
+              </div>
+              <div class="roadmap-meta-item">
+                <strong>🔑 Ключовий скіл:</strong>
+                <span>Формулювання стратегічного важеля за елементами: Players, Added Value, Rules, Tactics, Scope</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 5 -->
+        <div class="roadmap-block block-5">
+          <div class="roadmap-block-header">
+            <span class="block-time">⏰ ГОДИНИ 9–10 • БЛОК 5</span>
+            <label class="block-checkbox-wrapper">
+              <input type="checkbox" class="block-checkbox" data-block="5">
+              <span>Виконано</span>
+            </label>
+          </div>
+          <div class="roadmap-block-content">
+            <h3>Змішані стратегії, Конкуренція за ринки та Закриті торги (Sealed Bids)</h3>
+            <p>Як діяти, коли чистих рівноваг немає: принцип байдужості (indifference). Розподіл ресурсів між містами в конкуренції брендів та стратегії участі в будівельних тендерах.</p>
+            <div class="roadmap-meta-grid">
+              <div class="roadmap-meta-item">
+                <strong>🎧 Слухати подкаст:</strong>
+                <span>Розділ 5 «Вибір та випадковість» (21 хв) + Розділ 7 «Сигнали і скринінг» (33 хв)</span>
+              </div>
+              <div class="roadmap-meta-item">
+                <strong>🎯 Задачі для практики:</strong>
+                <span>Задача 5 (Готелі Карпат: Захар Беркут vs Вежа Ведмежа), Задача 6 (Тендер на два готелі Big і Small)</span>
+              </div>
+              <div class="roadmap-meta-item">
+                <strong>🔑 Ключовий скіл:</strong>
+                <span>Визначення домінування у складних матрицях розподілу ринку та оцінка асиметричних часток</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 6 -->
+        <div class="roadmap-block block-6">
+          <div class="roadmap-block-header">
+            <span class="block-time">⏰ ГОДИНИ 11–12 • БЛОК 6</span>
+            <label class="block-checkbox-wrapper">
+              <input type="checkbox" class="block-checkbox" data-block="6">
+              <span>Виконано</span>
+            </label>
+          </div>
+          <div class="roadmap-block-content">
+            <h3>Фінальна симуляція мідтерму, Формульна шпора та Бліц-тест</h3>
+            <p>Закріплення знань у стресовому режимі. Проходимо інтерактивний тест, перевіряємо себе за чеклістом та повторюємо всі формули перед виходом на екзамен.</p>
+            <div class="roadmap-meta-grid">
+              <div class="roadmap-meta-item">
+                <strong>⚡ Практика:</strong>
+                <span>Проходження інтерактивного бліц-тесту (10 питань)</span>
+              </div>
+              <div class="roadmap-meta-item">
+                <strong>📋 Матеріали:</strong>
+                <span>Екзаменаційний Cheat Sheet (Шпора з формулами та алгоритмами на 1 сторінці)</span>
+              </div>
+              <div class="roadmap-meta-item">
+                <strong>🎯 Результат:</strong>
+                <span>100% готовність до будь-якої задачі на мідтермі в понеділок!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: THEORY DEEP-DIVE -->
+    <section id="theory">
+      <div class="section-head">
+        <span class="section-head-badge">КОНЦЕПЦІЇ НА ПАЛЬЦЯХ</span>
+        <h2>Теорія "Без Води": Все, Що Треба Знати</h2>
+        <p>Короткі, кришталево чисті пояснення ключових концепцій з математичним обґрунтуванням.</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Concept 1 -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">1. Рівновага Неша & Метод Підкреслювання</h3>
+            <span class="card-badge blue">Основи</span>
+          </div>
+          <div class="concept-explanation">
+            <h4>Що це простими словами:</h4>
+            <p><b>Рівновага Неша</b> — це стан гри, де жоден із гравців не хоче одноосібно змінити своє рішення, знаючи рішення суперника. Це взаємні найкращі відповіді (Mutual Best Responses).</p>
+          </div>
+          <div class="concept-explanation emerald">
+            <h4>Лайфхак для екзамену (Метод підкреслювання):</h4>
+            <p>1. Зафіксуй кожен <b>стовпчик</b> Гравця 2. Знайди найбільше <b>перше число</b> (виграш Гравця 1) і підкресли його.</p>
+            <p>2. Зафіксуй кожен <b>рядок</b> Гравця 1. Знайди найбільше <b>друге число</b> (виграш Гравця 2) і підкресли його.</p>
+            <p>3. Клітинка, де підкреслено <b>ОБИДВА числа</b> — це Рівновага Неша!</p>
+          </div>
+        </div>
+
+        <!-- Concept 2 -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">2. Строге проти Слабкого Домінування</h3>
+            <span class="card-badge amber">Важливо</span>
+          </div>
+          <div class="concept-explanation">
+            <h4>Строге домінування (Strict Dominance):</h4>
+            <p>Стратегія $s_i^*$ <b>строго домінує</b> $s_i'$, якщо вона дає <b>строго більший виграш</b> за БУДЬ-ЯКИХ дій інших гравців: $u_i(s_i^*, s_{-i}) > u_i(s_i', s_{-i})$ для всіх $s_{-i}$.</p>
+          </div>
+          <div class="concept-explanation purple">
+            <h4>Правило IESDS (Ітеративне викреслювання):</h4>
+            <p>Строго доміновані стратегії <b>раціональний гравець ніколи не гратиме</b>. Їх можна сміливо викреслювати з матриці по черзі, спрощуючи гру до меншого розміру (як у Задачі 4)!</p>
+          </div>
+        </div>
+
+        <!-- Concept 3 -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">3. Grim Trigger та Нескінченна Співпраця</h3>
+            <span class="card-badge emerald">Формули</span>
+          </div>
+          <div class="concept-explanation">
+            <h4>Стратегія "Grim Trigger" (Безжальне покарання):</h4>
+            <p>«Я співпрацюю, доки ти співпрацюєш. Якщо ти зрадив хоча б один раз — я караю тебе зрадою НАЗАВЖДИ».</p>
+          </div>
+          <div class="concept-explanation emerald">
+            <h4>Формула стабільності співпраці:</h4>
+            <div class="cheat-formula">V(coop) = R / (1 - δ) ≥ T + δP / (1 - δ) = V(defect)</div>
+            <p>Звідси критичний дисконт: <b>δ ≥ (T - R) / (T - P)</b>.</p>
+            <p>Оскільки $\delta = \frac{1}{1 + r}$, максимальна ставка відсотка: <b>r ≤ (R - P) / (T - R)</b>.</p>
+            <p><b>Затримка 2 роки:</b> $\delta^2 \ge \frac{T - R}{T - P} \implies \delta \ge \sqrt{\frac{T - R}{T - P}}$. Ставка $r$ падає, співпраця стає значно важчою!</p>
+          </div>
+        </div>
+
+        <!-- Concept 4 -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">4. Зворотна Індукція (Rollback) & Погрози</h3>
+            <span class="card-badge rose">Дерева</span>
+          </div>
+          <div class="concept-explanation">
+            <h4>Правило 1: Look Forward, Reason Backward:</h4>
+            <p>У послідовних іграх дивимось на кінцеві листки дерева. Обираємо найкраще для того, хто ходить останнім, і "відкочуємо" назад.</p>
+          </div>
+          <div class="concept-explanation amber">
+            <h4>Недостовірна погроза (Incredible Threat):</h4>
+            <p>Погроза «я почну цінову війну» (як у Британських Авіаліній проти Lufthansa) є <b>пустослів'ям</b>, бо коли суперник уже зайшов, почати війну невигідно самому собі (виграш нижчий). Щоб погроза працювала, потрібне <b>зобов'язання (commitment)</b>: спалені мости або контракт!</p>
+          </div>
+        </div>
+
+        <!-- Concept 5 -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">5. Фреймворк PARTS (Brandenburger & Nalebuff)</h3>
+            <span class="card-badge blue">Бізнес-Кейси</span>
+          </div>
+          <div class="concept-explanation">
+            <h4>5 Важелів зміни гри:</h4>
+            <ul>
+              <li><b>P (Players):</b> Зміна складу гравців (введення 2-го постачальника, комплементора).</li>
+              <li><b>A (Added Value):</b> $V(\text{всі}) - V(\text{без тебе})$. Ніхто не може взяти більше своєї доданої вартості!</li>
+              <li><b>R (Rules):</b> Контракти (MFN, цінові узгодження, обмін частками акцій).</li>
+              <li><b>T (Tactics):</b> Сприйняття, блеф, розсіювання або створення туману.</li>
+              <li><b>S (Scope):</b> Межі та зв'язування ігор (мультиринковий контакт).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Concept 6 -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">6. Сигнали (Signaling) та Скринінг (Screening)</h3>
+            <span class="card-badge purple">Інформація</span>
+          </div>
+          <div class="concept-explanation">
+            <h4>Асиметрична інформація:</h4>
+            <p><b>Signaling (Сигнал):</b> Дія інформованої сторони (наприклад, витратний диплом УКУ чи довга гарантія на товар), яку невигідно імітувати гравцям з низькою якістю.</p>
+            <p><b>Screening (Скринінг):</b> Дія неінформованої сторони (наприклад, страхова компанія пропонує меню полісів із різною франшизою, розділяючи клієнтів за ризиком).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: 10 SOLVED MIDTERM PROBLEMS -->
+    <section id="problems">
+      <div class="section-head">
+        <span class="section-head-badge">ПРАКТИЧНИЙ БАНК</span>
+        <h2>Повний Розбір 10 Задач Мідтерму</h2>
+        <p>Точні завдання з матеріалів курсу з детальними математичними розв'язками, платіжними матрицями та поясненнями для кожного пункту.</p>
+      </div>
+
+      <!-- Problem 1 -->
+      <div class="problem-card" data-category="nash">
+        <div class="problem-header">
+          <span class="problem-num">ЗАДАЧА 1 • Одночасна гра Морка і Мінді (Mork & Mindy)</span>
+          <span class="card-badge blue">Матриця 3x3</span>
+        </div>
+        <p class="problem-desc">
+          Розгляньте одночасну гру у стратегічній формі. Виплати Морка вказані першими ($u_{Mork}, u_{Mindy}$):
+        </p>
+        <div class="matrix-wrapper">
+          <table class="payoff-matrix">
+            <thead>
+              <tr>
+                <th>Морк \ Мінді</th>
+                <th>X</th>
+                <th>Y</th>
+                <th>Z</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>A</th>
+                <td><span class="payoff-val"><span class="p1">80</span>, <span class="p2">30</span></span></td>
+                <td><span class="payoff-val"><span class="p1">0</span>, <span class="p2">20</span></span></td>
+                <td><span class="payoff-val"><span class="p1">20</span>, <span class="p2">20</span></span></td>
+              </tr>
+              <tr>
+                <th>B</th>
+                <td><span class="payoff-val"><span class="p1">85</span>, <span class="p2">15</span></span></td>
+                <td><span class="payoff-val"><span class="p1">20</span>, <span class="p2">20</span></span></td>
+                <td><span class="payoff-val"><span class="p1">5</span>, <span class="p2">5</span></span></td>
+              </tr>
+              <tr>
+                <th>C</th>
+                <td class="nash"><span class="payoff-val"><span class="p1">95*</span>, <span class="p2">25*</span></span></td>
+                <td><span class="payoff-val"><span class="p1">5</span>, <span class="p2">25</span></span></td>
+                <td><span class="payoff-val"><span class="p1">5</span>, <span class="p2">25</span></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p><b>Запитання:</b> a) Чи має хтось домінантну стратегію? b) Чи має хтось доміновану стратегію? c) Знайдіть усі рівноваги Неша у чистих стратегіях. d) Якщо виплата Мінді у клітинці (A, X) зросте з 30 до 300, як зміниться рівновага Неша?</p>
+
+        <button class="solution-toggle">
+          <span>Розв'язок задачі 1</span>
+          <span class="toggle-icon">Показати розв'язок ▼</span>
+        </button>
+        <div class="solution-content">
+          <div class="step-box">
+            <h5>a. Домінантні стратегії (Dominant strategy)</h5>
+            <p><b>Для Морка (Рядки):</b><br>
+              Якщо Мінді грає X: C дає 95 (найкраще: $95 > 85 > 80$).<br>
+              Якщо Мінді грає Y: B дає 20 (найкраще: $20 > 5 > 0$).<br>
+              Якщо Мінді грає Z: A дає 20 (найкраще: $20 > 5 = 5$).<br>
+              Оскільки за різних дій Мінді найкращими є різні дії Морка (C, B або A), <b>Морк НЕ має домінантної стратегії</b>.<br>
+              <b>Для Мінді (Стовпці):</b><br>
+              Якщо Морк грає A: X дає 30 (краще за Y: 20 і Z: 20).<br>
+              Якщо Морк грає B: Y дає 20 (краще за X: 15 і Z: 5).<br>
+              Отже, <b>Мінді також НЕ має домінантної стратегії</b>.
+            </p>
+          </div>
+          <div class="step-box">
+            <h5>b. Доміновані стратегії (Dominated strategy)</h5>
+            <p>Перевіряємо, чи є стратегія, яка завжди гірша за іншу:<br>
+              Для Мінді порівняємо <b>Z проти Y</b>: проти A (20=20), проти B ($5 < 20$), проти C ($25=25$). Z слабко домінується Y, але строго домінованих стратегій у чистих стратегіях немає.<br>
+              <b>Відповідь:</b> Жоден гравець не має строго домінованої стратегії.
+            </p>
+          </div>
+          <div class="step-box">
+            <h5>c. Рівновага Неша в чистих стратегіях (Pure Strategy Nash Equilibrium)</h5>
+            <p>Застосовуємо метод підкреслювання найкращих відповідей:<br>
+              - Для стовпця X: найкраща дія Морка — <b>C</b> (95).<br>
+              - Для стовпця Y: найкраща дія Морка — <b>B</b> (20).<br>
+              - Для стовпця Z: найкраща дія Морка — <b>A</b> (20).<br>
+              Тепер для Морка:<br>
+              - Для рядка C: виплати Мінді (25, 25, 25). Найкраща відповідь — <b>X, Y, Z</b> (усі дають 25).<br>
+              Перетин найкращих відповідей відбувається у клітинці <b>(C, X)</b>, оскільки:<br>
+              - Морк грає C (найкраща відповідь на X: $95 > 85, 80$).<br>
+              - Мінді грає X (одна з найкращих відповідей на C: $25 \ge 25$).<br>
+              <b>Відповідь:</b> Єдина рівновага Неша у чистих стратегіях — <b>(C, X)</b> з виплатами <b>(95, 25)</b>.
+            </p>
+          </div>
+          <div class="step-box">
+            <h5>d. Зміна виплати Мінді в (A, X) з 30 на 300</h5>
+            <p><b>Відповідь: Рівновага Неша НЕ ЗМІНИТЬСЯ (залишиться (C, X))!</b><br>
+              <b>Чому? Пояснення:</b><br>
+              Навіть якщо Мінді отримуватиме 300 у клітинці (A, X), для того, щоб ця клітинка стала рівновагою Неша, дія <b>A</b> має бути найкращою відповіддю Морка на вибір Мінді <b>X</b>.<br>
+              Але коли Мінді обирає X, Морк обирає між A (80), B (85) і C (95). Морк завжди обере <b>C (95)</b>! Морку байдуже, скільки отримає Мінді в клітинці A, він максимізує ВЛАСНИЙ виграш.<br>
+              Тому стан (A, X) не є стабільним: Морк відхилиться до C. Рівновагою залишається <b>(C, X)</b>!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem 2 -->
+      <div class="problem-card" data-category="dilemma">
+        <div class="problem-header">
+          <span class="problem-num">ЗАДАЧА 2 • Спільне підприємство (Joint Venture & Grim Trigger)</span>
+          <span class="card-badge emerald">Повторювана гра</span>
+        </div>
+        <p class="problem-desc">
+          Ви та інша фірма створили спільне підприємство. Щороку обидві фірми вирішують: докладати зусиль (Effort) чи бути «зайцем» (No Effort).
+        </p>
+        <div class="matrix-wrapper">
+          <table class="payoff-matrix">
+            <thead>
+              <tr>
+                <th>Ви \ Інша фірма</th>
+                <th>Effort (Зусилля)</th>
+                <th>No Effort (Без зусиль)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Effort</th>
+                <td><span class="payoff-val"><span class="p1">25</span>, <span class="p2">25</span></span></td>
+                <td><span class="payoff-val"><span class="p1">0</span>, <span class="p2">50</span></span></td>
+              </tr>
+              <tr>
+                <th>No Effort</th>
+                <td><span class="payoff-val"><span class="p1">50</span>, <span class="p2">0</span></span></td>
+                <td class="nash"><span class="payoff-val"><span class="p1">10*</span>, <span class="p2">10*</span></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p><b>Запитання:</b> a) Формально доведіть, що це дилема в'язня. b) Якщо гра нескінченна зі стратегією Grim Trigger, за якого діапазону процентної ставки $r$ співпраця є стійкою? c) Наскільки ймовірною є співпраця з огляду на знайдену ставку? d) Якщо порушення виявляється лише через 2 роки (покарання відтерміноване), чи зробить це співпрацю більш чи менш імовірною?</p>
+
+        <button class="solution-toggle">
+          <span>Розв'язок задачі 2</span>
+          <span class="toggle-icon">Показати розв'язок ▼</span>
+        </button>
+        <div class="solution-content">
+          <div class="step-box">
+            <h5>a. Формальне підтвердження Дилеми в'язня</h5>
+            <p>Позначаємо виплати:<br>
+              - $T = 50$ (Temptation — вигода зради: No Effort проти Effort)<br>
+              - $R = 25$ (Reward — спільна співпраця: Effort, Effort)<br>
+              - $P = 10$ (Punishment — взаємна зрада: No Effort, No Effort)<br>
+              - $S = 0$ (Sucker's payoff — коли тебе обманули: Effort проти No Effort)<br>
+              <b>Критерій 1:</b> $T > R > P > S \implies 50 > 25 > 10 > 0$ (виконується строго!).<br>
+              <b>Критерій 2:</b> Стратегія <b>No Effort є строго домінантною</b> для обох гравців ($50 > 25$ та $10 > 0$).<br>
+              <b>Критерій 3:</b> Рівновага Неша в чистих стратегіях — (No Effort, No Effort) з виплатами (10, 10), яка є <b>Парето-неефективною</b> (обидва отримали б по 25 у випадку співпраці).<br>
+              Це класична формальна Дилема в'язня.
+            </p>
+          </div>
+          <div class="step-box">
+            <h5>b. Діапазон процентної ставки r для стійкості співпраці</h5>
+            <p>Нехай $\delta = \frac{1}{1 + r}$ — річний дисконтний фактор.<br>
+              - Виплата від вічної співпраці: $V_{\text{coop}} = \frac{25}{1 - \delta}$.<br>
+              - Виплата від одноразової зради: у рік 1 отримуємо 50, а з року 2 і назавжди вмикається Grim Trigger і ми отримуємо по 10: $V_{\text{defect}} = 50 + \frac{10\delta}{1 - \delta}$.<br>
+              Умова збереження співпраці ($V_{\text{coop}} \ge V_{\text{defect}}$):<br>
+              $$\frac{25}{1 - \delta} \ge 50 + \frac{10\delta}{1 - \delta}$$
+              $$25 \ge 50(1 - \delta) + 10\delta = 50 - 40\delta$$
+              $$40\delta \ge 25 \implies \delta \ge \frac{25}{40} = 0.625$$
+              Підставляємо $\delta = \frac{1}{1 + r}$:<br>
+              $$\frac{1}{1 + r} \ge 0.625 \implies 1 + r \le \frac{1}{0.625} = 1.6 \implies r \le 0.6 \text{ (або } 60\%\text{)}$$
+              <b>Відповідь:</b> Співпраця є стійкою, коли процентна ставка $r$ знаходиться в діапазоні <b>від 0% до 60% ($r \le 60\%$)</b>.
+            </p>
+          </div>
+          <div class="step-box">
+            <h5>c. Оцінка ймовірності збереження співпраці</h5>
+            <p><b>Відповідь: Співпраця є ДУЖЕ ЙМОВІРНОЮ.</b><br>
+              <b>Пояснення:</b> Гранична процентна ставка $r \le 60\%$ є надзвичайно високою. У реальній економіці реальні процентні ставки та вартість капіталу становлять 5–15%, що значно нижче 60%. Отже, дисконт-фактор фірм буде значно вищим за 0.625, і фірмам буде вигідно зберігати партнерство.
+            </p>
+          </div>
+          <div class="step-box">
+            <h5>d. Вплив затримки спостереження на 2 роки</h5>
+            <p><b>Відповідь: Це робить співпрацю ЗНАЧНО МЕНШ ІМОВІРНОЮ.</b><br>
+              <b>Математичне пояснення:</b><br>
+              Якщо партнер не може помітити обман протягом двох років, порушник може зірвати "куш" зради двічі (у рік 1 отримати 50, і в рік 2 знову 50, поки партнер ще продовжує докладати зусиль!). Покарання 10 почнеться лише з 3-го року:<br>
+              $$V_{\text{defect}} = 50 + 50\delta + \frac{10\delta^2}{1 - \delta}$$
+              Нерівність співпраці: $\frac{25}{1-\delta} \ge 50 + 50\delta + \frac{10\delta^2}{1-\delta} \implies 40\delta^2 \ge 25 \implies \delta^2 \ge 0.625 \implies \delta \ge \sqrt{0.625} \approx 0.791$.<br>
+              Тоді $1 + r \le \frac{1}{0.791} \approx 1.265 \implies r \le 26.5\%$.<br>
+              Необхідний дисконт підскочив з 0.625 до 0.791, а допустима ставка відсотка впала з 60% до 26.5%. Короткострокова вигода зради подвоїлася, а покарання відтермінувалося в дисконтоване майбутнє.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem 3 -->
+      <div class="problem-card" data-category="sequential">
+        <div class="problem-header">
+          <span class="problem-num">ЗАДАЧА 3 • Вибір ресторану Максом і Саллі (Restaurant Game)</span>
+          <span class="card-badge purple">Дерево гри & Rollback</span>
+        </div>
+        <p class="problem-desc">
+          Двоє друзів обирають між трьома ресторанами A, B, C. Вподобання:
+          <br>• <b>Макс:</b> $A \succ B \succ C$ (виплати: $A=3, B=2, C=1$).
+          <br>• <b>Саллі:</b> $B \succ A \succ C$ (виплати: $B=3, A=2, C=1$).
+          <br>Процедура: Спочатку <b>Макс викреслює один</b> із трьох варіантів. Потім <b>Саллі обирає один</b> із двох залишених.
+        </p>
+        <p><b>Запитання:</b> a) Запишіть гру в розширеній формі (дерево гри). b) Якщо Макс діє ненаївно/нестратегічно і в першому раунді викреслює свій найменш бажаний варіант C, який буде фінал? c) Яка справжня підігрова рівновага Неша? d) Чи відрізняється відповідь b від c? Чому?</p>
+
+        <button class="solution-toggle">
+          <span>Розв'язок задачі 3</span>
+          <span class="toggle-icon">Показати розв'язок ▼</span>
+        </button>
+        <div class="solution-content">
+          <div class="step-box">
+            <h5>a. Розширена форма (Game Tree)</h5>
+            <p>• <b>Початковий вузол (Макс):</b> 3 гілки — Викреслити A, Викреслити B, Викреслити C.<br>
+              • <b>Вузол 1 (Макс викреслив A):</b> Залишились {B, C}. Хід Саллі. Саллі порівнює B (3) проти C (1) $\to$ <b>Саллі обирає B</b>. Виплати: (Макс: 2, Саллі: 3).<br>
+              • <b>Вузол 2 (Макс викреслив B):</b> Залишились {A, C}. Хід Саллі. Саллі порівнює A (2) проти C (1) $\to$ <b>Саллі обирає A</b>. Виплати: (Макс: 3, Саллі: 2).<br>
+              • <b>Вузол 3 (Макс викреслив C):</b> Залишились {A, B}. Хід Саллі. Саллі порівнює B (3) проти A (2) $\to$ <b>Саллі обирає B</b>. Виплати: (Макс: 2, Саллі: 3).
+            </p>
+          </div>
+          <div class="step-box">
+            <h5>b. Нестратегічний (наївний) вибір Макса</h5>
+            <p>Якщо Макс міркує наївно: «Мій найгірший варіант C, тому я викреслю C».<br>
+              Тоді залишаються {A, B}. Хід переходить до Саллі. Саллі любить B більше за A ($B \succ A$), тому <b>Саллі обирає ресторан B</b>.<br>
+              Фінальне рішення: <b>Ресторан B</b> (Макс отримує свій другий за пріоритетом варіант, виплата 2).
+            </p>
+          </div>
+          <div class="step-box">
+            <h5>c. Стратегічна рівновага (Rollback / Зворотна індукція)</h5>
+            <p>Застосовуємо Правило 1: <i>Дивись уперед, міркуй назад</i>.<br>
+              Макс аналізує наперед реакцію Саллі на кожен свій хід:<br>
+              - Якщо Макс викреслить A $\to$ Саллі обере B $\to$ виплата Макса 2.<br>
+              - Якщо Макс викреслить B $\to$ Саллі обере A $\to$ <b>виплата Макса 3 (ЙОГО МАКСИМУМ!)</b>.<br>
+              - Якщо Макс викреслить C $\to$ Саллі обере B $\to$ виплата Макса 2.<br>
+              Макс обирає між виплатами 2, 3 і 2. Він обирає 3!<br>
+              <b>Рівновага:</b> Макс <b>викреслює B</b>, після чого Саллі обирає <b>A</b>. Фінальний ресторан — <b>A</b>!
+            </p>
+          </div>
+          <div class="step-box">
+            <h5>d. Чому відповіді відрізняються?</h5>
+            <p><b>Так, відповіді відрізняються (Ресторан B проти Ресторану A).</b><br>
+              <b>Пояснення:</b> Наївний гравець фокусується егоцентрично лише на своєму першому кроці («прибрати те, що я не люблю»). Стратегічний гравець мислить алоцентрично (ставити себе на місце іншого): Макс розуміє, що якщо він залишить Саллі вибір між A і B, вона обере B. Але якщо Макс <i>усуне варіант B</i>, він змусить Саллі обирати між A і C, де Саллі сама віддасть перевагу A! Таким чином, Макс маніпулює вибором Саллі на свою користь.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem 4 -->
+      <div class="problem-card" data-category="nash">
+        <div class="problem-header">
+          <span class="problem-num">ЗАДАЧА 4 • Ітеративне викреслювання домінованих стратегій (3x3 IESDS)</span>
+          <span class="card-badge amber">IESDS Покроково</span>
+        </div>
+        <p class="problem-desc">
+          Розгляньте гру між Гравцем 1 (рядки: Up, Middle, Down) та Гравцем 2 (стовпці: Left, Middle, Right):
+        </p>
+        <div class="matrix-wrapper">
+          <table class="payoff-matrix">
+            <thead>
+              <tr>
+                <th>Гравець 1 \ Гравець 2</th>
+                <th>Left</th>
+                <th>Middle</th>
+                <th>Right</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Up</th>
+                <td><span class="payoff-val"><span class="p1">1</span>, <span class="p2">2</span></span></td>
+                <td><span class="payoff-val"><span class="p1">3</span>, <span class="p2">5</span></span></td>
+                <td class="dominated"><span class="payoff-val"><span class="p1">2</span>, <span class="p2">1</span></span></td>
+              </tr>
+              <tr>
+                <th>Middle</th>
+                <td class="dominated"><span class="payoff-val"><span class="p1">0</span>, <span class="p2">4</span></span></td>
+                <td class="dominated"><span class="payoff-val"><span class="p1">2</span>, <span class="p2">1</span></span></td>
+                <td class="dominated"><span class="payoff-val"><span class="p1">3</span>, <span class="p2">0</span></span></td>
+              </tr>
+              <tr>
+                <th>Down</th>
+                <td class="dominated"><span class="payoff-val"><span class="p1">-1</span>, <span class="p2">1</span></span></td>
+                <td class="nash"><span class="payoff-val"><span class="p1">4*</span>, <span class="p2">3*</span></span></td>
+                <td class="dominated"><span class="payoff-val"><span class="p1">0</span>, <span class="p2">2</span></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p><b>Запитання:</b> a) Чи має хтось домінантну стратегію? b) Чи має хтось доміновану стратегію? c) Знайдіть рівновагу цієї гри.</p>
+
+        <button class="solution-toggle">
+          <span>Розв'язок задачі 4</span>
+          <span class="toggle-icon">Показати розв'язок ▼</span>
+        </button>
+        <div class="solution-content">
+          <div class="step-box">
+            <h5>Крок 1. Перевірка домінування у вихідній матриці</h5>
+            <p>Поглянемо на виплати <b>Гравця 2</b> (другі числа):<br>
+              Порівняємо стовпчик <b>Middle</b> проти стовпчика <b>Right</b>:<br>
+              - Проти Up: Middle дає <b>5</b>, Right дає 1 ($5 > 1$).<br>
+              - Проти Middle: Middle дає <b>1</b>, Right дає 0 ($1 > 0$).<br>
+              - Проти Down: Middle дає <b>3</b>, Right дає 2 ($3 > 2$).<br>
+              У всіх 3 випадках Middle приносить строго більший виграш, ніж Right!<br>
+              <b>Висновок: Для Гравця 2 стратегія Right СТРОГО ДОМІНУЄТЬСЯ стратегією Middle.</b><br>
+              Гравець 2 ніколи не гратиме Right. <b>Викреслюємо стовпець Right!</b>
+            </p>
+          </div>
+          <div class="step-box">
+            <h5>Крок 2. Зменшена матриця (3 рядки x 2 стовпці: Left, Middle)</h5>
+            <p>Тепер аналізуємо рядки <b>Гравця 1</b> при виборі суперника лише між Left і Middle:<br>
+              Порівняємо рядок <b>Up</b> та рядок <b>Middle</b>:<br>
+              - Якщо Гравець 2 грає Left: Up дає <b>1</b>, Middle дає 0 ($1 > 0$).<br>
+              - Якщо Гравець 2 грає Middle: Up дає <b>3</b>, Middle дає 2 ($3 > 2$).<br>
+              У кожному з можливих випадків Up строго кращий за Middle!<br>
+              <b>Висновок: Для Гравця 1 стратегія Middle СТРОГО ДОМІНУЄТЬСЯ стратегією Up.</b><br>
+              <b>Викреслюємо рядок Middle!</b>
+            </p>
+          </div>
+          <div class="step-box">
+            <h5>Крок 3. Зменшена матриця (2 рядки: Up, Down x 2 стовпці: Left, Middle)</h5>
+            <p>Тепер дивимось на <b>Гравця 2</b>:<br>
+              - Якщо Гравець 1 грає Up: Middle дає <b>5</b> проти Left 2 ($5 > 2$).<br>
+              - Якщо Гравець 1 грає Down: Middle дає <b>3</b> проти Left 1 ($3 > 1$).<br>
+              <b>Висновок: Стовпець Left СТРОГО ДОМІНУЄТЬСЯ стовпцем Middle.</b><br>
+              <b>Викреслюємо стовпець Left!</b> Гравець 2 гарантовано грає <b>Middle</b>.
+            </p>
+          </div>
+          <div class="step-box">
+            <h5>Крок 4. Фінальний вибір Гравця 1 та Рівновага</h5>
+            <p>Знаючи, що Гравець 2 обов'язково грає <b>Middle</b>, Гравець 1 порівнює свої виплати:<br>
+              - Up дає 3.<br>
+              - Down дає <b>4</b>.<br>
+              Оскільки $4 > 3$, Гравець 1 обирає <b>Down</b>!<br>
+              <b>Відповідь:</b> Єдина рівновага Неша — <b>(Down, Middle)</b> з виплатами <b>(4, 3)</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem 5 -->
+      <div class="problem-card" data-category="spatial">
+        <div class="problem-header">
+          <span class="problem-num">ЗАДАЧА 5 • Конкуренція готелів Карпат (Захар Беркут vs Вежа Ведмежа)</span>
+          <span class="card-badge emerald">Ринкова конкуренція</span>
+        </div>
+        <p class="problem-desc">
+          Два карпатські готелі — «Захар Беркут» (ЗБ) та «Вежа Ведмежа» (ВВ) змагаються за туристів із 3 міст: <b>Київ (150 тис. грн)</b>, <b>Львів (90 тис. грн)</b>, <b>Одеса (72 тис. грн)</b>. Місткість готелів достатня для всіх туристів. Кожен готель має кошти на рекламну кампанію лише в <b>одному</b> місті.
+          <br>Правила:
+          <br>1. Якщо рекламу в місті запустив лише один готель — він забирає 100% прибутку цього міста.
+          <br>2. Якщо обидва запустили рекламу в одному місті — ділять прибуток 50/50.
+          <br>3. Якщо в місті ніхто не рекламувався — прибуток міста також ділиться 50/50.
+        </p>
+        <p><b>Запитання:</b> a) Які оптимальні стратегії для обох готелів? b) Припустимо, що бренд «Вежа Ведмежа» більш впізнаваний, і у разі одночасної присутності або відсутності реклами 70% прибутку йде ВВ, а 30% — ЗБ. Які тепер оптимальні стратегії?</p>
+
+        <button class="solution-toggle">
+          <span>Розв'язок задачі 5</span>
+          <span class="toggle-icon">Показати розв'язок ▼</span>
+        </button>
+        <div class="solution-content">
+          <div class="step-box">
+            <h5>a. Симетричний випадок (50/50 поділ)</h5>
+            <p>Загальний ринок = $150 + 90 + 72 = 312$ тис. грн.<br>
+              Розрахуємо виплати для ЗБ (Рядки) та ВВ (Стовпці) за вибором міста {Київ (К), Львів (Л), Одеса (О)}:<br>
+              • <b>(К, К):</b> Київ навпіл (75 кожен) + Львів навпіл (45) + Одеса навпіл (36) = <b>(156, 156)</b>.<br>
+              • <b>(К, Л):</b> ЗБ забирає весь Київ (150), ВВ забирає весь Львів (90), Одеса навпіл (36 кожен) $\to$ ЗБ: $150+36=186$, ВВ: $90+36=126 \to$ <b>(186, 126)</b>.<br>
+              • <b>(К, О):</b> ЗБ забирає Київ (150), ВВ забирає Одесу (72), Львів навпіл (45) $\to$ ЗБ: $150+45=195$, ВВ: $72+45=117 \to$ <b>(195, 117)</b>.<br>
+              • <b>(Л, Л):</b> (156, 156).<br>
+              • <b>(Л, О):</b> ЗБ: $90+75 = 165$, ВВ: $72+75 = 147 \to$ <b>(165, 147)</b>.<br>
+              • <b>(О, О):</b> (156, 156).<br>
+              Аналізуємо стратегію <b>Київ (К)</b> для ЗБ:<br>
+              - Проти К: Київ дає 156 (Львів дає 126, Одеса дає 117) $\to$ <b>К краще</b>.<br>
+              - Проти Л: Київ дає 186 (Львів дає 156, Одеса дає 147) $\to$ <b>К краще</b>.<br>
+              - Проти О: Київ дає 195 (Львів дає 165, Одеса дає 156) $\to$ <b>К краще</b>.<br>
+              <b>Висновок: Реклама в Києві є СТРОГО ДОМІНАНТНОЮ стратегією для обох готелів!</b><br>
+              Оптимальна стратегія: обидва готелі спрямовують рекламу виключно на <b>Київ</b>. Рівновага: <b>(Київ, Київ)</b> з прибутками <b>(156, 156)</b>.
+            </p>
+          </div>
+          <div class="step-box">
+            <h5>b. Асиметричний випадок (Бренд ВВ отримує 70%, а ЗБ 30%)</h5>
+            <p>Тепер базовий поділ без реклами або за спільної реклами: ВВ отримує 70%, ЗБ — 30%.<br>
+              Якщо ЗБ рекламується в Києві, а ВВ теж у Києві:<br>
+              - Київ ділиться 70/30: ВВ отримує $150 \times 0.7 = 105$, ЗБ $150 \times 0.3 = 45$.<br>
+              - Львів: ВВ $90 \times 0.7 = 63$, ЗБ $90 \times 0.3 = 27$.<br>
+              - Одеса: ВВ $72 \times 0.7 = 50.4$, ЗБ $72 \times 0.3 = 21.6$.<br>
+              Загалом (К, К): ЗБ = $45 + 27 + 21.6 = 93.6$, ВВ = $105 + 63 + 50.4 = 218.4$.<br>
+              Але якщо ЗБ піде у <b>Львів (Л)</b>, коли ВВ у Києві:<br>
+              ЗБ гарантовано забере 100% Львова = 90! У Києві ВВ забере 150. Одеса розділиться 70/30 (ЗБ: 21.6, ВВ: 50.4).<br>
+              Прибуток ЗБ при виборі Львова: $90 + 21.6 = 111.6$ тис. грн!<br>
+              Оскільки $111.6 > 93.6$, <b>слабшому бренду (ЗБ) стає НЕВИГІДНО воювати за Київ лоб у лоб!</b> ЗБ вигідніше рекламуватися у Львові.<br>
+              <b>Оптимальні стратегії:</b> ВВ рекламується в <b>Києві</b>, а ЗБ відступає і забирає <b>Львів</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem 6 -->
+      <div class="problem-card" data-category="spatial">
+        <div class="problem-header">
+          <span class="problem-num">ЗАДАЧА 6 • Тендер на два готелі Big і Small (Sealed-bid method)</span>
+          <span class="card-badge blue">Аукціон / Заявки</span>
+        </div>
+        <p class="problem-desc">
+          Інвестор будує два готелі: <b>Big (B)</b> — прибуток 15 млн, та <b>Small (S)</b> — прибуток 9 млн (разом 24 млн). Дві будівельні фірми подають закриті заявки. Кожна може запропонувати: <b>будівництво B</b>, <b>будівництво S</b>, або <b>Співпрацю на обох (C)</b>.
+          <br>Правила інвестора:
+          <br>1. Якщо тільки одна фірма подала заявку на готель — вона отримує його повністю.
+          <br>2. Якщо обидві подали на один і той самий готель — інвестор пропонує співпрацю 50/50 на обох готелях (по 12 млн кожній).
+          <br>3. Якщо одна подала на конкретний готель, а друга запропонувала співпрацю (C): на цьому готелі заявник отримує 60% (якщо B) або 80% (якщо S), а друга фірма 40% (якщо B) або 20% (якщо S). На іншому готелі ділять 50/50.
+          <br>4. Якщо обидві подали C — ділять обидва готелі 50/50 (по 12 млн).
+        </p>
+        <p><b>Запитання:</b> Знайдіть оптимальні стратегії для обох фірм (Рівновагу Неша).</p>
+
+        <button class="solution-toggle">
+          <span>Розв'язок задачі 6</span>
+          <span class="toggle-icon">Показати розв'язок ▼</span>
+        </button>
+        <div class="solution-content">
+          <div class="step-box">
+            <h5>Крок 1. Розрахунок платіжної матриці 3x3</h5>
+            <p>Стратегії: B (подати на Big), S (подати на Small), C (запропонувати співпрацю).<br>
+              • <b>(B, B):</b> обидва подали на B $\to$ поділ 50/50 на обох: <b>(12, 12)</b>.<br>
+              • <b>(B, S):</b> Фірма 1 забирає B (15), Фірма 2 забирає S (9) $\to$ <b>(15, 9)</b>.<br>
+              • <b>(B, C):</b> Фірма 1 отримує 60% від B ($15 \times 0.6 = 9$) + 50% від S ($9 \times 0.5 = 4.5$) = <b>13.5</b>. Фірма 2 отримує 40% від B ($15 \times 0.4 = 6$) + 50% від S (4.5) = <b>10.5</b>. Разом: <b>(13.5, 10.5)</b>.<br>
+              • <b>(S, B):</b> симетрично (B, S) $\to$ <b>(9, 15)</b>.<br>
+              • <b>(S, S):</b> <b>(12, 12)</b>.<br>
+              • <b>(S, C):</b> Фірма 1 отримує 80% від S ($9 \times 0.8 = 7.2$) + 50% від B ($15 \times 0.5 = 7.5$) = <b>14.7</b>. Фірма 2 отримує 20% від S ($1.8$) + 50% від B ($7.5$) = <b>9.3</b>. Разом: <b>(14.7, 9.3)</b>.<br>
+              • <b>(C, C):</b> поділ 50/50 $\to$ <b>(12, 12)</b>.
+            </p>
+          </div>
+          <div class="step-box">
+            <h5>Крок 2. Аналіз матриці та домінування</h5>
+            <div class="matrix-wrapper">
+              <table class="payoff-matrix">
+                <thead>
+                  <tr>
+                    <th>Фірма 1 \ Фірма 2</th>
+                    <th>B</th>
+                    <th>S</th>
+                    <th>C</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>B</th>
+                    <td class="nash"><span class="payoff-val"><span class="p1">12*</span>, <span class="p2">12*</span></span></td>
+                    <td><span class="payoff-val"><span class="p1">15</span>, <span class="p2">9</span></span></td>
+                    <td><span class="payoff-val"><span class="p1">13.5</span>, <span class="p2">10.5</span></span></td>
+                  </tr>
+                  <tr>
+                    <th>S</th>
+                    <td><span class="payoff-val"><span class="p1">9</span>, <span class="p2">15</span></span></td>
+                    <td><span class="payoff-val"><span class="p1">12</span>, <span class="p2">12</span></span></td>
+                    <td><span class="payoff-val"><span class="p1">14.7</span>, <span class="p2">9.3</span></span></td>
+                  </tr>
+                  <tr>
+                    <th>C</th>
+                    <td class="dominated"><span class="payoff-val"><span class="p1">10.5</span>, <span class="p2">13.5</span></span></td>
+                    <td class="dominated"><span class="payoff-val"><span class="p1">9.3</span>, <span class="p2">14.7</span></span></td>
+                    <td class="dominated"><span class="payoff-val"><span class="p1">12</span>, <span class="p2">12</span></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Поглянемо на стратегію <b>C (Співпраця)</b> для Фірми 1:<br>
+              - Проти B: C дає 10.5, тоді як B дає 12 ($10.5 < 12$).<br>
+              - Проти S: C дає 9.3, тоді як S дає 12 і B дає 15 ($9.3 < 12, 15$).<br>
+              - Проти C: C дає 12, тоді як B дає 13.5 ($12 < 13.5$).<br>
+              <b>Стратегія C суворо домінується! Викреслюємо C для обох фірм.</b>
+            </p>
+          </div>
+          <div class="step-box">
+            <h5>Крок 3. Рівновага Неша</h5>
+            <p>У грі 2x2 між B та S:<br>
+              - Якщо Фірма 2 грає B: Фірма 1 обирає між B (12) та S (9) $\to$ обирає <b>B</b>.<br>
+              - Якщо Фірма 2 грає S: Фірма 1 обирає між B (15) та S (12) $\to$ обирає <b>B</b>.<br>
+              Стратегія <b>B (подати заявку на великий готель Big)</b> є строго домінатною в редукованій грі!<br>
+              <b>Відповідь:</b> Оптимальна стратегія для обох фірм — подавати заявку на готель <b>B</b>. Рівновага Неша — <b>(B, B)</b> з виплатами <b>(12, 12)</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem 7 -->
+      <div class="problem-card" data-category="dilemma">
+        <div class="problem-header">
+          <span class="problem-num">ЗАДАЧА 7 • Подолання Дилеми в'язня через обмін частками акцій (Equity Swap)</span>
+          <span class="card-badge emerald">Зміна правил (Rules)</span>
+        </div>
+        <p class="problem-desc">
+          Дві фірми опинилися в ціновій війні:
+        </p>
+        <div class="matrix-wrapper">
+          <table class="payoff-matrix">
+            <thead>
+              <tr>
+                <th>Фірма 1 \ Фірма 2</th>
+                <th>Low (Низька ціна)</th>
+                <th>High (Висока ціна)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Low</th>
+                <td class="nash"><span class="payoff-val"><span class="p1">40*</span>, <span class="p2">40*</span></span></td>
+                <td><span class="payoff-val"><span class="p1">65</span>, <span class="p2">35</span></span></td>
+              </tr>
+              <tr>
+                <th>High</th>
+                <td><span class="payoff-val"><span class="p1">35</span>, <span class="p2">65</span></span></td>
+                <td><span class="payoff-val"><span class="p1">60</span>, <span class="p2">60</span></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>СЕО Фірми 1 хоче позбутися дилеми в'язня і пропонує Фірмі 2 обмінятися $x\%$ акцій фірми 1 на такий самий відсоток акцій фірми 2.
+          <br><b>Запитання:</b> Який мінімальний цілий відсоток $x\%$ зробить стратегію High домінантною, і на яку виплату може розраховувати СЕО Фірми 1?
+        </p>
+
+        <button class="solution-toggle">
+          <span>Розв'язок задачі 7</span>
+          <span class="toggle-icon">Показати розв'язок ▼</span>
+        </button>
+        <div class="solution-content">
+          <div class="step-box">
+            <h5>Крок 1. Нова функція виплат після обміну частками</h5>
+            <p>Після обміну $x\%$ (де частка $x \in [0, 1]$) акціонер Фірми 1 володіє $(1 - x)$ прибутку Фірми 1 та $x$ прибутку Фірми 2:<br>
+              $$\Pi_1' = (1 - x)\Pi_1 + x\Pi_2$$
+              Ми хочемо, щоб встановлення високої ціни <b>High</b> стало вигіднішим за Low.
+            </p>
+          </div>
+          <div class="step-box">
+            <h5>Крок 2. Умова домінування High</h5>
+            <p><b>1. Коли Фірма 2 грає High:</b><br>
+              - Якщо Фірма 1 грає High: $\Pi_1'(H, H) = (1-x)\cdot 60 + x\cdot 60 = 60$.<br>
+              - Якщо Фірма 1 грає Low: $\Pi_1'(L, H) = (1-x)\cdot 65 + x\cdot 35 = 65 - 30x$.<br>
+              Умова: $60 \ge 65 - 30x \implies 30x \ge 5 \implies x \ge \frac{5}{30} = \frac{1}{6} \approx 16.67\%$.<br><br>
+              <b>2. Коли Фірма 2 грає Low:</b><br>
+              - Якщо Фірма 1 грає High: $\Pi_1'(H, L) = (1-x)\cdot 35 + x\cdot 65 = 35 + 30x$.<br>
+              - Якщо Фірма 1 грає Low: $\Pi_1'(L, L) = (1-x)\cdot 40 + x\cdot 40 = 40$.<br>
+              Умова: $35 + 30x \ge 40 \implies 30x \ge 5 \implies x \ge \frac{5}{30} = \frac{1}{6} \approx 16.67\%$.
+            </p>
+          </div>
+          <div class="step-box">
+            <h5>Крок 3. Висновок та очікувана виплата</h5>
+            <p>Мінімальний <b>цілий відсоток</b>: округлюємо $16.67\%$ у більший бік $\implies$ <b>x = 17%</b>.<br>
+              При такому обміні обидві фірми гарантовано обирають <b>(High, High)</b>.<br>
+              Очікувана виплата СЕО Фірми 1: $(1 - 0.17)\cdot 60 + 0.17\cdot 60 = <b>60</b>.<br>
+              (У порівнянні з виплатою 40 без обміну, прибуток зріс на 50%!).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem 8 -->
+      <div class="problem-card" data-category="dilemma">
+        <div class="problem-header">
+          <span class="problem-num">ЗАДАЧА 8 • Рекламна війна Colgate vs Crest (Параметр Дилеми В'язня)</span>
+          <span class="card-badge amber">Умови дилеми</span>
+        </div>
+        <p class="problem-desc">
+          Дві компанії змагаються в рекламі: Advertise (Рекламувати) та Do Not Advertise (Не рекламувати).
+          <br>Які значення параметра $x$ перетворюють цю матрицю на класичну <b>Дилему в'язня</b>?
+        </p>
+
+        <button class="solution-toggle">
+          <span>Розв'язок задачі 8</span>
+          <span class="toggle-icon">Показати розв'язок ▼</span>
+        </button>
+        <div class="solution-content">
+          <div class="step-box">
+            <h5>Загальний універсальний критерій для екзамену</h5>
+            <p>Щоб симетрична гра 2x2 була Дилемою в'язня, мають одночасно виконуватися три залізні правила:<br>
+              1. <b>Нерівність виплат:</b> $T > R > P > S$, де:<br>
+              - $T$ (Temptation): прибуток, коли ти рекламуєшся (зрада), а конкурент — ні.<br>
+              - $R$ (Reward): прибуток взаємного миру (обидва НЕ рекламуються).<br>
+              - $P$ (Punishment): прибуток рекламної війни (обидва рекламуються).<br>
+              - $S$ (Sucker): прибуток, коли ти не рекламуєшся, а тебе атакують рекламою.<br>
+              2. <b>Домінантність дії "Advertise":</b> для обох гравців дія рекламуватися має приносити строго більше за будь-якої дії суперника.<br>
+              3. <b>Колективна вигода:</b> $2R > T + S$.<br>
+              <i>Приклад для екзамену:</i> якщо взаємна реклама дає по 5, мир — по 4, а одноосібна реклама дає $x$, то умова Дилеми в'язня вимагає: $x > 4$ (щоб була спокуса відхилитись від миру).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem 9 -->
+      <div class="problem-card" data-category="nash">
+        <div class="problem-header">
+          <span class="problem-num">ЗАДАЧА 9 • Визначення Стратегії (Working Definition of Strategy)</span>
+          <span class="card-badge purple">Теорія</span>
+        </div>
+        <p class="problem-desc">
+          Що таке <b>стратегія</b> згідно з робочим визначенням цього курсу?
+          <br>1. План дій гравця у грі (A player's plan of actions in a game).
+          <br>2. Набір правил, з яких гравець може обирати (A set of rules a player can choose from).
+          <br>3. Поведінка фірми в певних умовах (The behaviour of a firm in a certain setting).
+          <br>4. Найкращі альтернативи, які має гравець (The best alternatives a player has).
+        </p>
+
+        <button class="solution-toggle">
+          <span>Розв'язок задачі 9</span>
+          <span class="toggle-icon">Показати розв'язок ▼</span>
+        </button>
+        <div class="solution-content">
+          <div class="step-box">
+            <h5>Правильна відповідь: Варіант 1</h5>
+            <p><b>A player's plan of actions in a game (План дій гравця у грі).</b><br>
+              У теорії ігор стратегія — це не просто одне рішення, а <b>повний вичерпний план дій</b> (complete contingency plan), який точно специфікує дію гравця для КОЖНОГО можливого вузла рішень (state of the world), у якому він може опинитися під час гри.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem 10 -->
+      <div class="problem-card" data-category="sequential">
+        <div class="problem-header">
+          <span class="problem-num">ЗАДАЧА 10 • Монополіст British Airways проти Lufthansa (Credible Threat)</span>
+          <span class="card-badge rose">Вхід на ринок & Блеф</span>
+        </div>
+        <p class="problem-desc">
+          British Airways є монополістом на внутрішніх рейсах у Великій Британії. Lufthansa планує вийти на цей ринок. British Airways погрожує розпочати цінову війну, якщо Lufthansa зайде.
+          <br><b>Запитання:</b> Чи є ця погроза достовірною (Credible Threat)?
+        </p>
+        <button class="solution-toggle">
+          <span>Розв'язок задачі 10</span>
+          <span class="toggle-icon">Показати розв'язок ▼</span>
+        </button>
+        <div class="solution-content">
+          <div class="step-box">
+            <h5>Аналіз дерева гри (Game Tree)</h5>
+            <p>• <b>Хід 1 (Lufthansa):</b> Обрати між "No Market Entry" (Не заходити) та "Market Entry" (Зайти).<br>
+              - Якщо Lufthansa НЕ заходить: статус-кво. Виплати: (Lufthansa: 0, BA: 750).<br>
+              - Якщо Lufthansa ЗАХОДИТЬ: хід переходить до British Airways.<br>
+              • <b>Хід 2 (British Airways):</b> Обрати між "No Price War" (Мир / акомодація) та "Price War" (Цінова війна).<br>
+              - Якщо BA обирає "No Price War": ринок ділиться. Виплати: (Lufthansa: 200, BA: 400).<br>
+              - Якщо BA починає "Price War": запекла війна тарифів нижче собівартості. Виплати: (Lufthansa: -50, BA: 100).
+            </p>
+          </div>
+          <div class="step-box">
+            <h5>Висновок за зворотною індукцією (Rollback)</h5>
+            <p>1. Припустимо, Lufthansa вже увійшла на ринок. Тоді British Airways обирає між прибутком <b>400 (мир)</b> та <b>100 (цінова війна)</b>. Оскільки $400 > 100$, British Airways <b>раціонально обере НЕ починати війну</b>!<br>
+              2. Lufthansa, прораховуючи гру наперед (Look forward, reason backward), знає, що BA не воюватиме, і сміливо входить на ринок, отримуючи прибуток 200.<br>
+              3. <b>Відповідь: Погроза British Airways НЕ Є ДОСТОВІРНОЮ (Non-credible / Empty threat).</b> Це просто блеф. Коли вхід відбувся, воювати шкодить самій BA. Щоб погроза стала достовірною, BA мала б заздалегідь зв'язати собі руки (commitment), наприклад, інвестувати в надлишкові літаки чи підписати юридичну гарантію найнижчої ціни.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: AUDIO PODCASTS (NOTEBOOKLM) -->
+    <section id="podcasts">
+      <div class="section-head">
+        <span class="section-head-badge">АУДІО-ПІДГОТОВКА</span>
+        <h2>Подкасти з NotebookLM Українською</h2>
+        <p>Слухай якісні аудіо-огляди розділів підручника Avinash Dixit & Barry Nalebuff «The Art of Strategy» прямо тут. Ідеально слухати під час прогулянки або повторення перед сном.</p>
+      </div>
+
+      <div class="audio-player-container">
+        <div class="current-track-info">
+          <div class="track-avatar">🎧</div>
+          <div class="track-details">
+            <h3 id="playerTitle">Розділ 2: Зворотне міркування та дерева гри</h3>
+            <p id="playerDesc">Avinash Dixit & Barry Nalebuff — The Art of Strategy</p>
+          </div>
+          <button id="speedBtn" class="theme-toggle-btn" style="margin-left: auto;">1x</button>
+        </div>
+
+        <audio id="mainAudioPlayer" class="native-player" controls preload="metadata">
+          <source src="audio/ch2.m4a" type="audio/mp4">
+          Ваш браузер не підтримує аудіоплеєр.
+        </audio>
+
+        <div id="podcastPlaylist" class="podcast-playlist">
+          <!-- Populated dynamically by script.js -->
+        </div>
+      </div>
+
+      <!-- NotebookLM Guide Box -->
+      <div class="card" style="margin-top: 1.5rem;">
+        <div class="card-header">
+          <h3 class="card-title">💡 Як згенерувати додаткові подкасти на NotebookLM</h3>
+          <span class="card-badge emerald">Notebook.google.com</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 1rem;">
+          Ти можеш самостійно створити персональний подкаст на будь-яку незрозумілу тему курсу за 2 хвилини:
+        </p>
+        <div class="roadmap-meta-grid">
+          <div class="roadmap-meta-item">
+            <strong>Крок 1:</strong>
+            <span>Перейди на <a href="https://notebooklm.google.com" target="_blank" style="color:var(--accent-blue);">notebooklm.google.com</a> та створи новий Notebook.</span>
+          </div>
+          <div class="roadmap-meta-item">
+            <strong>Крок 2:</strong>
+            <span>Завантаж PDF файли з курсу (слайди, задачі, статті HBR «The Right Game»).</span>
+          </div>
+          <div class="roadmap-meta-item">
+            <strong>Крок 3:</strong>
+            <span>У правому верхньому кутку натисни <b>«Generate Audio Overview» (Подкаст)</b>. Можна вказати фокус: «Зроби пояснення українською мовою з фокусом на формули рівноваги Неша та дилему в'язня».</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: YOUTUBE VIDEOS -->
+    <section id="videos">
+      <div class="section-head">
+        <span class="section-head-badge">ВІДЕО-ПОЯСНЕННЯ</span>
+        <h2>Рекомендовані Відео на YouTube</h2>
+        <p>Добірка найкращих відеороликів, які розбирають ці концепції візуально та з гумором.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Video 1 -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Дилема В'язня та Еволюція Довіри</h3>
+            <span class="card-badge emerald">Veritasium</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+            Найкраще пояснення повторюваної дилеми в'язня: чому Tit-for-Tat і Grim Trigger перемагають егоїзм.
+          </p>
+          <a href="https://www.youtube.com/watch?v=mScpHTIi-kM" target="_blank" class="calc-btn" style="text-decoration:none; text-align:center; display:block;">
+            ▶️ Дивитися на YouTube (Veritasium)
+          </a>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Як Знайти Рівновагу Неша</h3>
+            <span class="card-badge blue">Game Theory 101</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+            Покроковий розбір матричних ігор, домінантних стратегій та методу найкращих відповідей від професора Вільяма Спаніеля.
+          </p>
+          <a href="https://www.youtube.com/watch?v=0hO2m_e5qgI" target="_blank" class="calc-btn" style="text-decoration:none; text-align:center; display:block;">
+            ▶️ Дивитися на YouTube (GT 101)
+          </a>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Зворотна Індукція та Дерева Ігор</h3>
+            <span class="card-badge purple">Game Theory 101</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+            Як будувати Game Trees, відсікати неправдоподібні погрози і знаходити Subgame Perfect Equilibrium.
+          </p>
+          <a href="https://www.youtube.com/watch?v=13_Z_p7P9-g" target="_blank" class="calc-btn" style="text-decoration:none; text-align:center; display:block;">
+            ▶️ Дивитися на YouTube (GT 101)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: INTERACTIVE SOLVERS -->
+    <section id="tools">
+      <div class="section-head">
+        <span class="section-head-badge">ІНТЕРАКТИВНИЙ СИМУЛЯТОР</span>
+        <h2>Матричний Калькулятор & Симулятор Grim Trigger</h2>
+        <p>Перевір власні значення або швидко розв'яжи будь-яку екзаменаційну матрицю.</p>
+      </div>
+
+      <!-- Matrix Solver -->
+      <div class="solver-container">
+        <h3 style="margin-bottom: 1rem;">🧮 2x2 Nash Equilibrium Matrix Solver</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+          Введи виплати для Гравця 1 (Синє поле) та Гравця 2 (Червоне поле) — алгоритм знайде домінантні стратегії та підсвітить Рівновагу Неша!
+        </p>
+
+        <div class="solver-grid">
+          <div>
+            <table class="matrix-input-table">
+              <tr>
+                <td></td>
+                <th style="font-size: 0.85rem; color: var(--text-muted);">Left (P2)</th>
+                <th style="font-size: 0.85rem; color: var(--text-muted);">Right (P2)</th>
+              </tr>
+              <tr>
+                <th style="font-size: 0.85rem; color: var(--text-muted); padding-right: 0.5rem;">Top (P1)</th>
+                <td id="cell_TL">
+                  <div class="cell-inputs">
+                    <input type="number" id="m_u1_TL" value="25" title="P1 Top-Left">
+                    <input type="number" id="m_u2_TL" value="25" title="P2 Top-Left">
+                  </div>
+                </td>
+                <td id="cell_TR">
+                  <div class="cell-inputs">
+                    <input type="number" id="m_u1_TR" value="0" title="P1 Top-Right">
+                    <input type="number" id="m_u2_TR" value="50" title="P2 Top-Right">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th style="font-size: 0.85rem; color: var(--text-muted); padding-right: 0.5rem;">Bottom (P1)</th>
+                <td id="cell_BL">
+                  <div class="cell-inputs">
+                    <input type="number" id="m_u1_BL" value="50" title="P1 Bottom-Left">
+                    <input type="number" id="m_u2_BL" value="0" title="P2 Bottom-Left">
+                  </div>
+                </td>
+                <td id="cell_BR">
+                  <div class="cell-inputs">
+                    <input type="number" id="m_u1_BR" value="10" title="P1 Bottom-Right">
+                    <input type="number" id="m_u2_BR" value="10" title="P2 Bottom-Right">
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <button id="matrixSolveBtn" class="calc-btn">Знайти Рівновагу Неша ⚡</button>
+          </div>
+
+          <div id="matrixSolverResult" class="solver-result">
+            <div class="result-badge">Очікує запуску</div>
+            <p>Натисніть кнопку «Знайти Рівновагу Неша» для розрахунку.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grim Trigger Calculator -->
+      <div class="solver-container">
+        <h3 style="margin-bottom: 1rem;">⏳ Grim Trigger & Discount Factor Calculator</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+          Розрахунок порогового значення дисконт-фактора $\delta$ та процентної ставки $r$ для збереження співпраці.
+        </p>
+
+        <div class="solver-grid">
+          <div>
+            <div class="solver-input-group">
+              <label>Виплата від співпраці (Reward, R):</label>
+              <input type="number" id="grim_R" value="25" class="hour-pill" style="width:100%; text-align:left; padding:0.6rem 1rem;">
+            </div>
+            <div class="solver-input-group">
+              <label>Виплата від зради (Temptation, T):</label>
+              <input type="number" id="grim_T" value="50" class="hour-pill" style="width:100%; text-align:left; padding:0.6rem 1rem;">
+            </div>
+            <div class="solver-input-group">
+              <label>Виплата від покарання (Punishment, P):</label>
+              <input type="number" id="grim_P" value="10" class="hour-pill" style="width:100%; text-align:left; padding:0.6rem 1rem;">
+            </div>
+            <div class="solver-input-group">
+              <label>Затримка виявлення обману:</label>
+              <select id="grim_delay" class="hour-pill" style="width:100%; text-align:left; padding:0.6rem 1rem;">
+                <option value="1">1 рік (Миттєве виявлення)</option>
+                <option value="2">2 роки (Відтерміноване покарання)</option>
+              </select>
+            </div>
+            <button id="grimCalcBtn" class="calc-btn">Розрахувати поріг δ та r ⚡</button>
+          </div>
+
+          <div id="grimCalcResult" class="solver-result">
+            <div class="result-badge">Результат</div>
+            <p>Натисніть кнопку розрахунку для отримання параметрів співпраці.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: CHEAT SHEET -->
+    <section id="cheatsheet">
+      <div class="section-head">
+        <span class="section-head-badge">ЕКЗАМЕНАЦІЙНИЙ КОНСПЕКТ</span>
+        <h2>Шпора на 1 Сторінку: Все Перед Очима</h2>
+        <p>Збережи собі або повтори за 15 хвилин до початку мідтерму в понеділок.</p>
+      </div>
+
+      <div class="cheat-grid">
+        <div class="cheat-card">
+          <h4>📌 Рівновага Неша (Чисті)</h4>
+          <div class="cheat-formula">u_i(s_i*, s_-i*) ≥ u_i(s_i, s_-i*)</div>
+          <p>Жоден гравець не може покращити свій виграш одноосібним відхиленням. Знаходиться підкреслюванням максимальних виплат.</p>
+        </div>
+
+        <div class="cheat-card">
+          <h4>📌 Дисконт Grim Trigger</h4>
+          <div class="cheat-formula">δ ≥ (T - R) / (T - P), r ≤ (R - P) / (T - R)</div>
+          <p>Умова утримання співпраці при безжальному покаранні. Чим вище r, тим менше гравці цінують майбутнє.</p>
+        </div>
+
+        <div class="cheat-card">
+          <h4>📌 Правило 1 (Діксіт-Нейлбафф)</h4>
+          <div class="cheat-formula">Look forward and reason backward</div>
+          <p>У послідовних іграх прораховуй реакцію суперника на останньому кроці дерева і роби відкат (rollback) назад.</p>
+        </div>
+
+        <div class="cheat-card">
+          <h4>📌 Додана вартість (PARTS)</h4>
+          <div class="cheat-formula">Added Value = V(All) - V(All \ {i})</div>
+          <p>Цінність гри з гравцем мінус цінність без нього. Ти не можеш забрати з ринку більше, ніж твоя додана вартість!</p>
+        </div>
+
+        <div class="cheat-card">
+          <h4>📌 Змішані стратегії</h4>
+          <div class="cheat-formula">E[u(Action 1)] = E[u(Action 2)]</div>
+          <p>Обирай ймовірність p так, щоб супернику було БАЙДУЖЕ, яку з його стратегій грати.</p>
+        </div>
+
+        <div class="cheat-card">
+          <h4>📌 Обмін частками (Equity Swap)</h4>
+          <div class="cheat-formula">x ≥ (T - R) / (T - S + R - P)</div>
+          <p>Мінімальний відсоток акцій для ліквідації дилеми в'язня і перетворення високої ціни на домінантну.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: BLITZ QUIZ -->
+    <section id="quiz">
+      <div class="section-head">
+        <span class="section-head-badge">САМОПЕРЕВІРКА</span>
+        <h2>Бліц-Тест до Мідтерму</h2>
+        <p>Перевір себе на типових тестових питаннях із миттєвими відповідями та роз'ясненнями.</p>
+      </div>
+
+      <div class="quiz-wrapper">
+        <div id="quizContainer">
+          <!-- Populated by script.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p><b>UCU Economics Midterm Hub</b> • Підготовлено для студентів УКУ (Курс 1028: Економіка та Теорія Ігор)</p>
+      <p>Усі матеріали адаптовано українською мовою. Бажаємо успіхів на мідтермі в понеділок! 🎓🚀</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
