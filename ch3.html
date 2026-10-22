@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Розділ 3: Дилема в'язня, Grim Trigger та Співпраця — UCU Economics</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-group">
+        <div class="logo-badge">UCU ECON</div>
+        <div class="logo-text">
+          <h1>Midterm Prep Hub</h1>
+          <p>Курс 1028 • Ярослав Притула</p>
+        </div>
+      </a>
+      <button id="themeToggleBtn" class="doc-download-btn">☀️ Світла</button>
+    </div>
+  </header>
+
+  <nav class="chapter-nav-bar">
+    <div class="chapter-nav-container">
+      <a href="index.html" class="chapter-link">🏠 Головна</a>
+      <a href="ch4.html" class="chapter-link">🎯 Розділ 4: Матриці & Неш</a>
+      <a href="ch3.html" class="chapter-link active">🤝 Розділ 3: Дилема в'язня</a>
+      <a href="ch2.html" class="chapter-link">🌲 Розділ 2 & 6: Дерева & Погрози</a>
+      <a href="parts.html" class="chapter-link">💼 PARTS & Value Net</a>
+      <a href="ch5.html" class="chapter-link">🎲 Розділ 5: Змішані & Готелі</a>
+      <a href="ch7.html" class="chapter-link">📢 Розділ 7: Сигнали & Скринінг</a>
+      <a href="practice.html" class="chapter-link" style="color:var(--accent-amber);">📝 Тренажер Задач</a>
+    </div>
+  </nav>
+
+  <main class="main-wrapper">
+    <div class="page-header">
+      <span class="page-badge">Тема 2 • Розділ 3 Dixit & Nalebuff</span>
+      <h1 class="page-title">Дилема в'язня, Grim Trigger та як бізнес рятує співпрацю</h1>
+      <p class="page-desc">
+        Чому індивідуальна жадібність призводить до спільного провалу, як повторювані ігри дозволяють тримати високі ціни без картельних змов, та як обмін частками акцій усуває цінову війну.
+      </p>
+    </div>
+
+    <!-- Audio Podcast -->
+    <div class="chapter-audio-card">
+      <div class="audio-header">
+        <span class="audio-icon">🎧</span>
+        <div>
+          <h3 style="font-size:1.15rem; font-weight:700;">Подкаст: Розділ 3 «Дилема в'язня та як її подолати»</h3>
+          <p style="color:var(--text-muted); font-size:0.85rem;">Avinash Dixit & Barry Nalebuff українською • 15 хв</p>
+        </div>
+      </div>
+      <audio controls style="width:100%; height:44px;">
+        <source src="audio/ch3.m4a" type="audio/mp4">
+        Ваш браузер не підтримує аудіо.
+      </audio>
+    </div>
+
+    <div class="content-grid">
+      <!-- Left Column: Plain-Language Logic -->
+      <div>
+        <div class="card">
+          <h2 class="card-title">💡 Суть Дилеми в'язня (Без абстрактних формул)</h2>
+          <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1rem;">
+            Уяви дві фірми, які продають однаковий товар. Якщо обидві тримають <b>високу ціну</b>, обидві мають гарний стабільний прибуток. Але у кожної є спокуса: <i>«Якщо я таємно знижу ціну, я заберу всіх клієнтів!»</i>. 
+          </p>
+
+          <div class="matrix-container-box">
+            <table class="real-matrix-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th class="player2-col-header">Співпраця (Висока ціна)</th>
+                  <th class="player2-col-header">Зрада (Низька ціна)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="player1-row-header">Співпраця</th>
+                  <td class="matrix-cell">
+                    <div class="matrix-cell-values"><span class="val-p1">25</span>, <span class="val-p2">25</span></div>
+                    <div class="matrix-cell-sub">Спільний мир (Обидва щасливі)</div>
+                  </td>
+                  <td class="matrix-cell">
+                    <div class="matrix-cell-values"><span class="val-p1">0</span>, <span class="val-p2">50</span></div>
+                    <div class="matrix-cell-sub">Тебе кинули: ти 0, суперник забрав 50</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="player1-row-header">Зрада</th>
+                  <td class="matrix-cell">
+                    <div class="matrix-cell-values"><span class="val-p1">50</span>, <span class="val-p2">0</span></div>
+                    <div class="matrix-cell-sub">Ти кинув: забрав 50, суперник 0</div>
+                  </td>
+                  <td class="matrix-cell nash-equilibrium">
+                    <div class="matrix-cell-values"><span class="val-p1">10*</span>, <span class="val-p2">10*</span></div>
+                    <div class="matrix-cell-sub" style="color:#fb7185;">💀 Цінова війна (Рівновага Неша!)</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="plain-concept-box amber">
+            <h4>Чому виникає трагедія:</h4>
+            <p>
+              Якщо суперник співпрацює — тобі вигідніше зрадити ($50 > 25$).<br>
+              Якщо суперник зраджує — тобі ТАК САМО вигідніше зрадити ($10 > 0$).<br>
+              Зрада (No Effort / Низька ціна) є <b>домінантною дією</b>. Обидва зраджують і отримують по <b>10 замість 25</b>!
+            </p>
+          </div>
+
+          <div class="plain-concept-box emerald">
+            <h4>Як нескінченні повторення рятують мир (Grim Trigger):</h4>
+            <p>
+              Якщо ми граємо гру <b>щороку і без кінця</b>, вмикається стратегія безжального покарання (Grim Trigger):<br>
+              <i>«Я тримаю високу ціну, поки ти тримаєш високу ціну. Якщо ти хоч раз демпінгуєш — я назавжди опускаю ціну й караю тебе до кінця життя»</i>.<br>
+              <b>Коли порушник побоїться обманути?</b><br>
+              Коли вигода отримати по 25 щороку у майбутньому <b>більша</b>, ніж урвати 50 один раз і потім все життя отримувати лише по 10.<br>
+              • Якщо процентна ставка в банку невисока ($r \le 60\%$), гроші в майбутньому цінні $\to$ <b>співпраця вигідна</b>.<br>
+              • Але якщо обман виявляється <b>лише через 2 роки</b> (покарання відкладене), порушник встигне забрати 50 двічі! Тоді спокуса зрадити різко зростає, і втримати мир стає <b>набагато важче</b>.
+            </p>
+          </div>
+
+          <div class="plain-concept-box purple">
+            <h4>Як бізнес ліквідує дилему в'язня через обмін частками (Equity Swap):</h4>
+            <p>
+              Якщо СЕО двох фірм обміняються $17\%$ акцій, вони стають співвласниками прибутків одне одного. Тепер, якщо Фірма 1 демпінгує, вона знищує прибуток Фірми 2, а значить <i>втрачає власні дивіденди</i>! Після обміну висока ціна стає вигідною, і обидві фірми отримують по <b>60</b> замість 40.
+            </p>
+          </div>
+        </div>
+
+        <!-- Problems for Chapter 3 -->
+        <div class="card">
+          <h2 class="card-title">🎯 Задачі Притули до Розділу 3</h2>
+
+          <!-- Task 2 -->
+          <div class="problem-item">
+            <div class="problem-title-row">
+              <span class="problem-title">Задача 2 • Спільне підприємство (Joint Venture)</span>
+              <span class="page-badge">Задача з файлу Притули</span>
+            </div>
+            <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:1rem;">
+              Виплати: (Effort, Effort)=(25,25), (No Effort, Effort)=(50,0), (Effort, No Effort)=(0,50), (No Effort, No Effort)=(10,10).
+            </p>
+            <div class="checker-box">
+              <label style="font-size:0.85rem; font-weight:700; display:block; margin-bottom:0.4rem;">
+                b) За якого значення процентної ставки r співпраця зі стратегією Grim Trigger є стійкою?
+              </label>
+              <div class="checker-inputs">
+                <input type="text" id="input_q2_rate" class="checker-input" placeholder="Введіть число або відсоток (наприклад: 60%)">
+                <button class="checker-btn" data-q="q2_rate">Перевірити</button>
+              </div>
+              <div id="feedback_q2_rate" class="checker-feedback"></div>
+            </div>
+
+            <div class="checker-box" style="margin-top:0.75rem;">
+              <label style="font-size:0.85rem; font-weight:700; display:block; margin-bottom:0.4rem;">
+                d) Якщо обман не помічають 2 роки (покарання відкладене), це робить співпрацю більш чи менш імовірною?
+              </label>
+              <div class="checker-inputs">
+                <input type="text" id="input_q2_delay" class="checker-input" placeholder="Введіть: менш або більш">
+                <button class="checker-btn" data-q="q2_delay">Перевірити</button>
+              </div>
+              <div id="feedback_q2_delay" class="checker-feedback"></div>
+            </div>
+          </div>
+
+          <!-- Task 7 -->
+          <div class="problem-item">
+            <div class="problem-title-row">
+              <span class="problem-title">Задача 7 • Обмін частками фірм (Equity Swap)</span>
+              <span class="page-badge">Мідтерм</span>
+            </div>
+            <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:1rem;">
+              Цінова війна: (Low, Low)=(40,40), (Low, High)=(65,35), (High, High)=(60,60). СЕО Фірми 1 пропонує обмін x% акцій.
+            </p>
+            <div class="checker-box">
+              <label style="font-size:0.85rem; font-weight:700; display:block; margin-bottom:0.4rem;">
+                Який мінімальний цілий відсоток x% потрібен для збереження високої ціни?
+              </label>
+              <div class="checker-inputs">
+                <input type="text" id="input_q7_percent" class="checker-input" placeholder="Введіть ціле число відсотків (наприклад: 17%)">
+                <button class="checker-btn" data-q="q7_percent">Перевірити</button>
+              </div>
+              <div id="feedback_q7_percent" class="checker-feedback"></div>
+            </div>
+
+            <div class="checker-box" style="margin-top:0.75rem;">
+              <label style="font-size:0.85rem; font-weight:700; display:block; margin-bottom:0.4rem;">
+                Яку виплату після цього отримає СЕО Фірми 1?
+              </label>
+              <div class="checker-inputs">
+                <input type="text" id="input_q7_payoff" class="checker-input" placeholder="Введіть очікуваний прибуток">
+                <button class="checker-btn" data-q="q7_payoff">Перевірити</button>
+              </div>
+              <div id="feedback_q7_payoff" class="checker-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Presentation Notes & Video -->
+      <div>
+        <div class="card">
+          <h3 class="card-title">📑 Конспект Слайдів Притули</h3>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
+            Що питає Притула на екзамені щодо Дилеми в'язня:
+          </p>
+          <ul style="padding-left:1.25rem; font-size:0.88rem; color:var(--text-muted); line-height:1.6;">
+            <li><b>Чому одноразова гра завжди провальна:</b> бо зрада — це домінантна стратегія.</li>
+            <li><b>Що дає повторення:</b> страх майбутньої втрати переважує сьогоднішню вигоду від зради.</li>
+            <li><b>Фактор часу:</b> чим швидше карають за порушення, тим міцніша співпраця.</li>
+            <li><b>Затримка на 2 роки:</b> різко збільшує спокусу вкрасти, бо крадій збирає куш подвійно.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">🎥 Відео до теми</h3>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
+            Шедевральне відео Veritasium про те, як виникає довіра та чому Tit-for-Tat перемагає:
+          </p>
+          <div class="video-embed-wrapper">
+            <iframe src="https://www.youtube.com/embed/mScpHTIi-kM" title="Veritasium Prisoner Dilemma" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div style="margin-top:0.75rem;">
+            <a href="https://www.youtube.com/watch?v=mScpHTIi-kM" target="_blank" class="video-btn" style="display:block;">
+              ▶️ Відкрити відео прямо на YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>UCU Economics Midterm Hub • Підготовка до мідтерму Притули • Усі матеріали українською</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

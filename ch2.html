@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Розділ 2 & 6: Послідовні ігри, Дерева та Достовірність погроз — UCU Economics</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-group">
+        <div class="logo-badge">UCU ECON</div>
+        <div class="logo-text">
+          <h1>Midterm Prep Hub</h1>
+          <p>Курс 1028 • Ярослав Притула</p>
+        </div>
+      </a>
+      <button id="themeToggleBtn" class="doc-download-btn">☀️ Світла</button>
+    </div>
+  </header>
+
+  <nav class="chapter-nav-bar">
+    <div class="chapter-nav-container">
+      <a href="index.html" class="chapter-link">🏠 Головна</a>
+      <a href="ch4.html" class="chapter-link">🎯 Розділ 4: Матриці & Неш</a>
+      <a href="ch3.html" class="chapter-link">🤝 Розділ 3: Дилема в'язня</a>
+      <a href="ch2.html" class="chapter-link active">🌲 Розділ 2 & 6: Дерева & Погрози</a>
+      <a href="parts.html" class="chapter-link">💼 PARTS & Value Net</a>
+      <a href="ch5.html" class="chapter-link">🎲 Розділ 5: Змішані & Готелі</a>
+      <a href="ch7.html" class="chapter-link">📢 Розділ 7: Сигнали & Скринінг</a>
+      <a href="practice.html" class="chapter-link" style="color:var(--accent-amber);">📝 Тренажер Задач</a>
+    </div>
+  </nav>
+
+  <main class="main-wrapper">
+    <div class="page-header">
+      <span class="page-badge">Тема 3 • Розділи 2 & 6 Dixit & Nalebuff</span>
+      <h1 class="page-title">Послідовні ігри, Дерева рішень (Game Trees) та Достовірність погроз</h1>
+      <p class="page-desc">
+        Правило 1 теорії ігор: «Дивись уперед, міркуй назад». Як розв'язувати дерева ігор, чому наївні рішення програють стратегічним, та як відрізнити реальну погрозу від пустого блефу.
+      </p>
+    </div>
+
+    <!-- Audio Podcasts -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:2rem;">
+      <div class="chapter-audio-card" style="margin-bottom:0;">
+        <div class="audio-header">
+          <span class="audio-icon">🎧</span>
+          <div>
+            <h3 style="font-size:1.05rem; font-weight:700;">Розділ 2: Зворотне міркування</h3>
+            <p style="color:var(--text-muted); font-size:0.8rem;">Дерева рішень та rollback • 18 хв</p>
+          </div>
+        </div>
+        <audio controls style="width:100%; height:40px;">
+          <source src="audio/ch2.m4a" type="audio/mp4">
+        </audio>
+      </div>
+
+      <div class="chapter-audio-card" style="margin-bottom:0;">
+        <div class="audio-header">
+          <span class="audio-icon">🎧</span>
+          <div>
+            <h3 style="font-size:1.05rem; font-weight:700;">Розділ 6: Стратегічні ходи</h3>
+            <p style="color:var(--text-muted); font-size:0.8rem;">Погрози, обіцянки, зобов'язання • 18 хв</p>
+          </div>
+        </div>
+        <audio controls style="width:100%; height:40px;">
+          <source src="audio/ch6.m4a" type="audio/mp4">
+        </audio>
+      </div>
+    </div>
+
+    <div class="content-grid">
+      <div>
+        <div class="card">
+          <h2 class="card-title">🌲 Як будувати та розв'язувати дерево гри (Game Tree)</h2>
+          <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1rem;">
+            У послідовних іграх гравці ходять по черзі. Ми представляємо це як дерево: від кореневого вузла йдуть гілки дій.
+          </p>
+
+          <div class="plain-concept-box emerald">
+            <h4>Правило 1 (Look forward and reason backward):</h4>
+            <p>
+              1. <b>Подивись уперед:</b> Знайди найостанніші вузли дерева, де приймається остаточне рішення.<br>
+              2. <b>Оціни вибір останнього гравця:</b> Яка гілка дає йому максимальний виграш? Він обере саме її. Інші гілки викреслюємо.<br>
+              3. <b>Відкоти назад (Rollback):</b> Перенеси цей результат на крок назад і подивись, що тепер вигідно обрати першому гравцеві.
+            </p>
+          </div>
+
+          <div class="plain-concept-box amber">
+            <h4>Чому наївний вибір програє (Кейс ресторану Макса і Саллі):</h4>
+            <p>
+              Макс любить: <b>A > B > C</b>. Саллі любить: <b>B > A > C</b>.<br>
+              Макс викреслює один варіант, потім Саллі обирає з двох залишених.<br>
+              • <b>Наївний Макс</b> думає: <i>«Я ненавиджу C, тому просто викреслю C»</i>. Залишаються {A, B}. Саллі обирає між ними і бере <b>B</b> (улюблений Саллі, але для Макса це лише 2-й варіант).<br>
+              • <b>Стратегічний Макс</b> прораховує реакцію Саллі: <i>«Якщо я викреслю B, я змушу Саллі обирати між A і C. Саллі любить A більше за C, тому вона САМА обере A!»</i>. Макс викреслює B і отримує свій топ-1 ресторан <b>A</b>!
+            </p>
+          </div>
+
+          <div class="plain-concept-box rose">
+            <h4>Недостовірна погроза (Incredible Threat) на прикладі авіакомпаній:</h4>
+            <p>
+              British Airways погрожує: <i>«Якщо Lufthansa вийде на ринок Великобританії, я почну цінову війну!»</i>.<br>
+              <b>Чому це блеф?</b><br>
+              Поглянь на кінцеві виплати, коли Lufthansa вже зайшла:<br>
+              - Якщо BA починає цінову війну $\to$ BA зазнає важких збитків (виплата 100).<br>
+              - Якщо BA мириться і ділить ринок $\to$ BA заробляє гарний прибуток (виплата 400).<br>
+              Оскільки $400 > 100$, <b>коли Lufthansa вже зайшла, воювати British Airways невигідно самій собі!</b> Lufthansa знає це і спокійно заходить на ринок. Погроза є пустослів'ям.
+            </p>
+          </div>
+        </div>
+
+        <!-- Problems for Chapter 2 & 6 -->
+        <div class="card">
+          <h2 class="card-title">🎯 Задачі Притули до Розділів 2 та 6</h2>
+
+          <!-- Task 3 -->
+          <div class="problem-item">
+            <div class="problem-title-row">
+              <span class="problem-title">Задача 3 • Вибір ресторану Максом і Саллі</span>
+              <span class="page-badge">Задача Притули</span>
+            </div>
+            <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:1rem;">
+              Вподобання: Макс ($A \succ B \succ C$), Саллі ($B \succ A \succ C$). Макс викреслює один варіант, Саллі обирає з двох решти.
+            </p>
+            <div class="checker-box">
+              <label style="font-size:0.85rem; font-weight:700; display:block; margin-bottom:0.4rem;">
+                Яке фінальне рішення (який ресторан) буде обрано за справжньою рівновагою Неша?
+              </label>
+              <div class="checker-inputs">
+                <input type="text" id="input_q3_strategic" class="checker-input" placeholder="Введіть ресторан: A, B чи C">
+                <button class="checker-btn" data-q="q3_strategic">Перевірити</button>
+              </div>
+              <div id="feedback_q3_strategic" class="checker-feedback"></div>
+            </div>
+
+            <div style="margin-top:1.25rem;">
+              <label style="font-size:0.85rem; font-weight:700; color:var(--text-muted);">
+                📷 Завантаж фото намальованого дерева гри:
+              </label>
+              <div class="dropzone-box" data-q="q3">
+                <div class="dropzone-icon">🌲</div>
+                <div class="dropzone-text">Перетягни фото свого Game Tree або клікни для вибору файлу</div>
+              </div>
+              <div id="photo_review_q3" style="display:none;"></div>
+            </div>
+          </div>
+
+          <!-- Task 10 -->
+          <div class="problem-item">
+            <div class="problem-title-row">
+              <span class="problem-title">Задача 10 • Монополіст British Airways vs Lufthansa</span>
+              <span class="page-badge">Мідтерм</span>
+            </div>
+            <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:1rem;">
+              British Airways погрожує ціновою війною у разі входу Lufthansa. Чи є ця погроза достовірною (Credible Threat)?
+            </p>
+            <div class="checker-box">
+              <div class="checker-inputs">
+                <input type="text" id="input_q10_threat" class="checker-input" placeholder="Введіть: Так або Ні (з поясненням)">
+                <button class="checker-btn" data-q="q10_threat">Перевірити</button>
+              </div>
+              <div id="feedback_q10_threat" class="checker-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Presentation Notes & Video -->
+      <div>
+        <div class="card">
+          <h3 class="card-title">📑 8 способів зробити погрозу достовірною</h3>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
+            Щоб погроза перестала бути блефом, гравець має <b>зв'язати собі руки (Commitment)</b>:
+          </p>
+          <ul style="padding-left:1.25rem; font-size:0.88rem; color:var(--text-muted); line-height:1.6;">
+            <li><b>1. Спалити мости:</b> фізично усунути шлях до відступу.</li>
+            <li><b>2. Автоматичні правила:</b> налаштувати автоматичну відповідь (doomsday machine).</li>
+            <li><b>3. Контрактні зобов'язання:</b> прописати великі штрафи за відступ.</li>
+            <li><b>4. Репутація:</b> якщо компанія воює на 100 ринках, їй важливо показати жорсткість.</li>
+            <li><b>5. Інвестиції у надлишкові потужності:</b> заздалегідь збудовані заводи роблять цінову війну дешевшою.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">🎥 Відео до теми</h3>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
+            Основи теорії ігор та стратегічних ходів від CrashCourse Economics:
+          </p>
+          <div class="video-embed-wrapper">
+            <iframe src="https://www.youtube.com/embed/3Y1WbVVzh11" title="CrashCourse Game Theory" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div style="margin-top:0.75rem;">
+            <a href="https://www.youtube.com/watch?v=3Y1WbVVzh11" target="_blank" class="video-btn" style="display:block;">
+              ▶️ Відкрити відео прямо на YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>UCU Economics Midterm Hub • Підготовка до мідтерму Притули • Усі матеріали українською</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

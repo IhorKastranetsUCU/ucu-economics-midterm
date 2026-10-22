@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Розділ 4: Одночасні ігри, Матриці 2х2 та Рівновага Неша — UCU Economics</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-group">
+        <div class="logo-badge">UCU ECON</div>
+        <div class="logo-text">
+          <h1>Midterm Prep Hub</h1>
+          <p>Курс 1028 • Ярослав Притула</p>
+        </div>
+      </a>
+      <button id="themeToggleBtn" class="doc-download-btn">☀️ Світла</button>
+    </div>
+  </header>
+
+  <!-- Navigation Bar across Chapters -->
+  <nav class="chapter-nav-bar">
+    <div class="chapter-nav-container">
+      <a href="index.html" class="chapter-link">🏠 Головна</a>
+      <a href="ch4.html" class="chapter-link active">🎯 Розділ 4: Матриці & Неш</a>
+      <a href="ch3.html" class="chapter-link">🤝 Розділ 3: Дилема в'язня</a>
+      <a href="ch2.html" class="chapter-link">🌲 Розділ 2 & 6: Дерева & Погрози</a>
+      <a href="parts.html" class="chapter-link">💼 PARTS & Value Net</a>
+      <a href="ch5.html" class="chapter-link">🎲 Розділ 5: Змішані & Готелі</a>
+      <a href="ch7.html" class="chapter-link">📢 Розділ 7: Сигнали & Скринінг</a>
+      <a href="practice.html" class="chapter-link" style="color:var(--accent-amber);">📝 Тренажер Задач</a>
+    </div>
+  </nav>
+
+  <main class="main-wrapper">
+    <div class="page-header">
+      <span class="page-badge">Тема 1 • Розділ 4 Dixit & Nalebuff</span>
+      <h1 class="page-title">Одночасні ігри, Матриці 2х2 та Рівновага Неша</h1>
+      <p class="page-desc">
+        Фундамент курсу економіки та теорії ігор. Як правильно читати матрицю без плутанини, чому перше число — це рядки, а друге — стовпці, як знаходити домінування та Рівновагу Неша за 30 секунд.
+      </p>
+    </div>
+
+    <!-- Audio Podcast Section -->
+    <div class="chapter-audio-card">
+      <div class="audio-header">
+        <span class="audio-icon">🎧</span>
+        <div>
+          <h3 style="font-size:1.15rem; font-weight:700;">Подкаст: Розділ 4 «Прекрасна рівновага» (The Art of Strategy)</h3>
+          <p style="color:var(--text-muted); font-size:0.85rem;">Згенеровано через NotebookLM українською мовою • 16 хв</p>
+        </div>
+      </div>
+      <audio controls style="width:100%; height:44px;">
+        <source src="audio/ch4.m4a" type="audio/mp4">
+        Ваш браузер не підтримує аудіо.
+      </audio>
+    </div>
+
+    <!-- Layout: Content Grid -->
+    <div class="content-grid">
+      <!-- Left Column: Core Theory & Clean Matrix -->
+      <div>
+        <div class="card">
+          <h2 class="card-title">📖 Як працює матриця 2х2 (Людською мовою)</h2>
+          <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1rem;">
+            У матричній грі гравці роблять свій вибір <b>одночасно</b> (ніхто не знає рішення іншого в момент вибору).
+          </p>
+
+          <!-- Pristine, unmistakable 2x2 Matrix Component -->
+          <div class="matrix-container-box">
+            <div class="matrix-legend">
+              <span class="legend-p1">■ Гравець 1 (Обирає РЯДКИ)</span>
+              <span class="legend-p2">■ Гравець 2 (Обирає СТОВПЦІ)</span>
+            </div>
+
+            <table class="real-matrix-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th class="player2-col-header">Дія Ліворуч (Left)</th>
+                  <th class="player2-col-header">Дія Праворуч (Right)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="player1-row-header">Дія Вгору (Up)</th>
+                  <td class="matrix-cell">
+                    <div class="matrix-cell-values">
+                      <span class="val-p1">1</span>, <span class="val-p2">2</span>
+                    </div>
+                    <div class="matrix-cell-sub">Гр.1 отримує 1, Гр.2 отримує 2</div>
+                  </td>
+                  <td class="matrix-cell">
+                    <div class="matrix-cell-values">
+                      <span class="val-p1">3</span>, <span class="val-p2">5</span>
+                    </div>
+                    <div class="matrix-cell-sub">Гр.1 отримує 3, Гр.2 отримує 5</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="player1-row-header">Дія Вниз (Down)</th>
+                  <td class="matrix-cell">
+                    <div class="matrix-cell-values">
+                      <span class="val-p1">0</span>, <span class="val-p2">4</span>
+                    </div>
+                    <div class="matrix-cell-sub">Гр.1 отримує 0, Гр.2 отримує 4</div>
+                  </td>
+                  <td class="matrix-cell nash-equilibrium">
+                    <div class="matrix-cell-values">
+                      <span class="val-p1">4*</span>, <span class="val-p2">3*</span>
+                    </div>
+                    <div class="matrix-cell-sub" style="color:#34d399; font-weight:700;">🌟 Рівновага Неша!</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="plain-concept-box emerald">
+            <h4>Правило двох чисел у клітинці $(x, y)$:</h4>
+            <p>
+              • <b>Перше число ($x$)</b> — це завжди виплата того, хто обирає <b>рядок</b> (Гравець 1).<br>
+              • <b>Друге число ($y$)</b> — це завжди виплата того, хто обирає <b>стовпець</b> (Гравець 2).<br>
+              Ніколи не плутай їх місцями на екзамені!
+            </p>
+          </div>
+
+          <div class="plain-concept-box">
+            <h4>Як знайти Рівновагу Неша методом найкращих відповідей (за 30 секунд):</h4>
+            <p>
+              1. <b>Крок 1 (Для Гравця 1):</b> Уяви, що Гравець 2 обрав лівий стовпець. Гравець 1 дивиться на <i>перші числа</i> в цьому стовпці: 1 (вгорі) чи 0 (внизу)? 1 більше за 0, тому підкреслюємо <b>1</b>. Потім дивіться на правий стовпець: 3 чи 4? 4 більше за 3, підкреслюємо <b>4</b>.<br>
+              2. <b>Крок 2 (Для Гравця 2):</b> Тепер уяви, що Гравець 1 обрав верхній рядок. Гравець 2 дивиться на <i>другі числа</i> в цьому рядку: 2 чи 5? 5 більше за 2, підкреслюємо <b>5</b>. Потім у нижньому рядку: 4 чи 3? 4 більше, підкреслюємо <b>4</b>.<br>
+              3. <b>Крок 3:</b> Шукаємо клітинку, де підкреслено <b>ОБИДВА</b> числа! Це і є Рівновага Неша.
+            </p>
+          </div>
+
+          <div class="plain-concept-box amber">
+            <h4>Домінантні та доміновані дії:</h4>
+            <p>
+              • <b>Домінантна дія:</b> якщо дія приносить тобі строго більше за БУДЬ-ЯКОГО вибору суперника. Якщо в тебе є домінантна дія — грай її завжди!<br>
+              • <b>Домінована дія:</b> дія, яка завжди гірша за іншу. Її можна сміливо викреслити (вона ніколи не буде зіграна розумним гравцем).
+            </p>
+          </div>
+        </div>
+
+        <!-- Problem Practice Cards for Chapter 4 -->
+        <div class="card">
+          <h2 class="card-title">🎯 Задачі Притули до цього розділу</h2>
+
+          <!-- Task 1 -->
+          <div class="problem-item">
+            <div class="problem-title-row">
+              <span class="problem-title">Задача 1 • Гра Морка і Мінді (Mork & Mindy)</span>
+              <span class="page-badge">Задача з файлу Притули</span>
+            </div>
+            <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:1rem;">
+              Морк обирає між {A, B, C}, Мінді між {X, Y, Z}. Виплати Морка вказані першими.
+            </p>
+            <table class="real-matrix-table" style="max-width:450px; margin-bottom:1rem;">
+              <thead>
+                <tr><th></th><th class="player2-col-header">X</th><th class="player2-col-header">Y</th><th class="player2-col-header">Z</th></tr>
+              </thead>
+              <tbody>
+                <tr><th class="player1-row-header">A</th><td>80, 30</td><td>0, 20</td><td>20, 20</td></tr>
+                <tr><th class="player1-row-header">B</th><td>85, 15</td><td>20, 20</td><td>5, 5</td></tr>
+                <tr><th class="player1-row-header">C</th><td class="nash-equilibrium"><b>95, 25</b></td><td>5, 25</td><td>5, 25</td></tr>
+              </tbody>
+            </table>
+
+            <div class="checker-box">
+              <label style="font-size:0.85rem; font-weight:700; display:block; margin-bottom:0.4rem;">
+                Яка тут рівновага Неша в чистих стратегіях?
+              </label>
+              <div class="checker-inputs">
+                <input type="text" id="input_q1_nash" class="checker-input" placeholder="Наприклад: (C, X)">
+                <button class="checker-btn" data-q="q1_nash">Перевірити відповідь</button>
+              </div>
+              <div id="feedback_q1_nash" class="checker-feedback"></div>
+            </div>
+
+            <div class="checker-box" style="margin-top:0.75rem;">
+              <label style="font-size:0.85rem; font-weight:700; display:block; margin-bottom:0.4rem;">
+                Якщо виплата Мінді в клітинці (A, X) зросте з 30 до 300, як зміниться рівновага Неша?
+              </label>
+              <div class="checker-inputs">
+                <input type="text" id="input_q1_change" class="checker-input" placeholder="Наприклад: не зміниться">
+                <button class="checker-btn" data-q="q1_change">Перевірити відповідь</button>
+              </div>
+              <div id="feedback_q1_change" class="checker-feedback"></div>
+            </div>
+          </div>
+
+          <!-- Task 4 -->
+          <div class="problem-item">
+            <div class="problem-title-row">
+              <span class="problem-title">Задача 4 • Покрокове викреслювання 3x3 (IESDS)</span>
+              <span class="page-badge">Мідтерм</span>
+            </div>
+            <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:1rem;">
+              Матриця 3x3: Гравець 1 обирає Up, Middle, Down. Гравець 2 обирає Left, Middle, Right.<br>
+              Виплати: Up=(1,2; 3,5; 2,1), Middle=(0,4; 2,1; 3,0), Down=(-1,1; 4,3; 0,2).
+            </p>
+            <div class="checker-box">
+              <label style="font-size:0.85rem; font-weight:700; display:block; margin-bottom:0.4rem;">
+                Яка рівновага Неша після викреслення всіх домінованих дій?
+              </label>
+              <div class="checker-inputs">
+                <input type="text" id="input_q4_nash" class="checker-input" placeholder="Наприклад: (Down, Middle)">
+                <button class="checker-btn" data-q="q4_nash">Перевірити відповідь</button>
+              </div>
+              <div id="feedback_q4_nash" class="checker-feedback"></div>
+            </div>
+
+            <!-- Photo Upload Dropzone -->
+            <div style="margin-top:1.25rem;">
+              <label style="font-size:0.85rem; font-weight:700; color:var(--text-muted);">
+                📷 Або завантаж фото своєї чернетки для перевірки:
+              </label>
+              <div class="dropzone-box" data-q="q4">
+                <div class="dropzone-icon">📤</div>
+                <div class="dropzone-text">Перетягни сюди фото розв'язку або клікни для вибору файлу</div>
+              </div>
+              <div id="photo_review_q4" style="display:none;"></div>
+            </div>
+          </div>
+
+          <!-- Task 9 -->
+          <div class="problem-item">
+            <div class="problem-title-row">
+              <span class="problem-title">Задача 9 • Визначення стратегії</span>
+            </div>
+            <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:0.75rem;">
+              Що таке стратегія за робочим визначенням курсу?
+              <br>1. План дій гравця у грі (A player's plan of actions).
+              <br>2. Набір правил, з яких гравець обирає.
+              <br>3. Поведінка фірми.
+            </p>
+            <div class="checker-inputs">
+              <input type="text" id="input_q9_def" class="checker-input" placeholder="Введіть 1, 2 або 3">
+              <button class="checker-btn" data-q="q9_def">Перевірити</button>
+            </div>
+            <div id="feedback_q9_def" class="checker-feedback"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Presentation Notes & Video -->
+      <div>
+        <!-- Presentation Box -->
+        <div class="card">
+          <h3 class="card-title">📑 Конспект Слайдів Притули</h3>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
+            Основні акценти з лекцій Ярослава Притули до теми 1:
+          </p>
+          <ul style="padding-left:1.25rem; font-size:0.88rem; color:var(--text-muted); line-height:1.6;">
+            <li><b>Стратегічна взаємодія:</b> результат залежить від ДВОХ сторін (алоцентризм — думай про суперника).</li>
+            <li><b>Чисті стратегії:</b> гравець обирає конкретну дію на 100%.</li>
+            <li><b>Найкраща відповідь (Best Response):</b> дія, яка максимізує виграш за даного фіксованого вибору іншого.</li>
+            <li><b>Рівновага Неша:</b> коли всі одночасно грають свої найкращі відповіді. Жодного жалю (No regrets)!</li>
+          </ul>
+          <div style="margin-top:1rem; border-top:1px solid var(--border-color); padding-top:1rem;">
+            <a href="docs/Game_theory_problems_week1-2_2026_to-solve.pdf" download class="doc-download-btn" style="width:100%; justify-content:center;">
+              📥 Завантажити файл задач Притули (.pdf)
+            </a>
+          </div>
+        </div>
+
+        <!-- Video Box -->
+        <div class="card">
+          <h3 class="card-title">🎥 Відео до теми</h3>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
+            Найкраще пояснення пошуку Рівноваги Неша наочно:
+          </p>
+          <div class="video-embed-wrapper">
+            <iframe src="https://www.youtube.com/embed/0hO2m_e5qgI" title="Finding Nash Equilibrium" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div style="margin-top:0.75rem;">
+            <a href="https://www.youtube.com/watch?v=0hO2m_e5qgI" target="_blank" class="video-btn" style="display:block;">
+              ▶️ Відкрити відео прямо на YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>UCU Economics Midterm Hub • Підготовка до мідтерму Притули • Усі матеріали українською</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

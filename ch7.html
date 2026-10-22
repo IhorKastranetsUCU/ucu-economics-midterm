@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Розділ 7: Сигнали, Скринінг та Інформаційна Асиметрія — UCU Economics</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-group">
+        <div class="logo-badge">UCU ECON</div>
+        <div class="logo-text">
+          <h1>Midterm Prep Hub</h1>
+          <p>Курс 1028 • Ярослав Притула</p>
+        </div>
+      </a>
+      <button id="themeToggleBtn" class="doc-download-btn">☀️ Світла</button>
+    </div>
+  </header>
+
+  <nav class="chapter-nav-bar">
+    <div class="chapter-nav-container">
+      <a href="index.html" class="chapter-link">🏠 Головна</a>
+      <a href="ch4.html" class="chapter-link">🎯 Розділ 4: Матриці & Неш</a>
+      <a href="ch3.html" class="chapter-link">🤝 Розділ 3: Дилема в'язня</a>
+      <a href="ch2.html" class="chapter-link">🌲 Розділ 2 & 6: Дерева & Погрози</a>
+      <a href="parts.html" class="chapter-link">💼 PARTS & Value Net</a>
+      <a href="ch5.html" class="chapter-link">🎲 Розділ 5: Змішані & Готелі</a>
+      <a href="ch7.html" class="chapter-link active">📢 Розділ 7: Сигнали & Скринінг</a>
+      <a href="practice.html" class="chapter-link" style="color:var(--accent-amber);">📝 Тренажер Задач</a>
+    </div>
+  </nav>
+
+  <main class="main-wrapper">
+    <div class="page-header">
+      <span class="page-badge">Тема 6 • Розділ 7 Dixit & Nalebuff</span>
+      <h1 class="page-title">Асиметрична інформація, Сигнали (Signaling) та Скринінг (Screening)</h1>
+      <p class="page-desc">
+        Чому слова в бізнесі нічого не варті (cheap talk), як довести високу якість товару через витратні сигнали, та як роботодавці й страхові компанії змушують людей розкривати правду.
+      </p>
+    </div>
+
+    <!-- Audio Podcast -->
+    <div class="chapter-audio-card">
+      <div class="audio-header">
+        <span class="audio-icon">🎧</span>
+        <div>
+          <h3 style="font-size:1.15rem; font-weight:700;">Подкаст: Розділ 7 «Тлумачення та маніпулювання інформацією»</h3>
+          <p style="color:var(--text-muted); font-size:0.85rem;">Avinash Dixit & Barry Nalebuff українською • 33 хв</p>
+        </div>
+      </div>
+      <audio controls style="width:100%; height:44px;">
+        <source src="audio/ch7.m4a" type="audio/mp4">
+        Ваш браузер не підтримує аудіо.
+      </audio>
+    </div>
+
+    <div class="content-grid">
+      <div>
+        <div class="card">
+          <h2 class="card-title">🍋 Проблема «Ринку Лимонів» (George Akerlof)</h2>
+          <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1rem;">
+            Уяви ринок вживаних авто. Є хороші машини («персики») і несправні мотлохи («лимони»). Покупець ззовні не може відрізнити їх на 100%.
+          </p>
+
+          <div class="plain-concept-box amber">
+            <h4>Чому виникає несприятливий відбір (Adverse Selection):</h4>
+            <p>
+              Покупець каже: <i>«Оскільки я можу потрапити на мотлох, я заплачу лише середню ціну»</i>.<br>
+              Але за середню ціну власники ідеальних машин не хочуть продавати свої авто і йдуть з ринку! Залишаються лише продавці зламаних авто. Середня якість падає ще нижче, ринок колапсує.<br>
+              <b>Як подолати цей провал ринку?</b> Є два інструменти: <b>Сигнали</b> та <b>Скринінг</b>.
+            </p>
+          </div>
+
+          <div class="plain-concept-box emerald">
+            <h4>📢 Сигнали (Signaling) — Дія інформованої сторони:</h4>
+            <p>
+              Продавець хорошого товару робить дію, яку <b>продавцю «лимона» робити невигідно або занадто дорого</b>:<br>
+              • <b>Довга гарантія (наприклад, 10 років або 150 000 км):</b> Якщо машина дійсно якісна, виробник майже не витратить грошей на ремонт. Якщо машина ламається — виробник збанкрутує. Тому гарантія — це достовірний сигнал якості!<br>
+              • <b>Складний диплом престижного вишу (УКУ):</b> Лінивому чи нездатному студентові занадто дорого за зусиллями закінчити складний курс алгоритмів та матану. Тому диплом УКУ сигналізує про працелюбність та інтелект.
+            </p>
+          </div>
+
+          <div class="plain-concept-box purple">
+            <h4>🔍 Скринінг (Screening) — Дія неінформованої сторони:</h4>
+            <p>
+              Сторона, яка не знає правди, пропонує <b>меню виборів (контрактів)</b>, змушуючи клієнта самостійно викрити свій тип:<br>
+              • <b>Страхування авто:</b> страхова компанія пропонує 2 поліси:<br>
+              1. Дешевий поліс, але з великою франшизою (якщо потрапиш у ДТП — платиш сам перші 10 000 грн). Його оберуть лише обережні водії!<br>
+              2. Дорогий поліс з нульовою франшизою (страхова покриває все). Його купують ризиковані водії.<br>
+              Клієнти самі себе відсортували!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div>
+        <div class="card">
+          <h3 class="card-title">💡 Питання на екзамені</h3>
+          <ul style="padding-left:1.25rem; font-size:0.88rem; color:var(--text-muted); line-height:1.7;">
+            <li><b>Чому слова — це Cheap Talk:</b> пусті розмови нічого не вартують, бо їх може повторити будь-який шахрай. Сигнал має бути витратним!</li>
+            <li><b>Різниця між Signaling та Screening:</b> Сигнал надсилає той, хто ЗНАЄ правду. Скринінг проводить той, хто НЕ ЗНАЄ правди.</li>
+            <li><b>Adverse Selection vs Moral Hazard:</b> Несприятливий відбір стається ДО угоди (прихована інформація). Моральний ризик стається ПІСЛЯ угоди (приховані дії, наприклад, людина застрахувала телефон і перестала його берегти).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>UCU Economics Midterm Hub • Підготовка до мідтерму Притули • Усі матеріали українською</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

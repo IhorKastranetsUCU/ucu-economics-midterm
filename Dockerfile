@@ -6,11 +6,8 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copy custom nginx configuration
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copy project files into nginx html directory
-COPY index.html /usr/share/nginx/html/
-COPY styles.css /usr/share/nginx/html/
-COPY script.js /usr/share/nginx/html/
-COPY audio/ /usr/share/nginx/html/audio/
+# Copy all project files into nginx html directory
+COPY . /usr/share/nginx/html/
 
 EXPOSE 80
 

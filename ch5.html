@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Розділ 5: Змішані стратегії, Готелі Карпат та Аукціони — UCU Economics</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-group">
+        <div class="logo-badge">UCU ECON</div>
+        <div class="logo-text">
+          <h1>Midterm Prep Hub</h1>
+          <p>Курс 1028 • Ярослав Притула</p>
+        </div>
+      </a>
+      <button id="themeToggleBtn" class="doc-download-btn">☀️ Світла</button>
+    </div>
+  </header>
+
+  <nav class="chapter-nav-bar">
+    <div class="chapter-nav-container">
+      <a href="index.html" class="chapter-link">🏠 Головна</a>
+      <a href="ch4.html" class="chapter-link">🎯 Розділ 4: Матриці & Неш</a>
+      <a href="ch3.html" class="chapter-link">🤝 Розділ 3: Дилема в'язня</a>
+      <a href="ch2.html" class="chapter-link">🌲 Розділ 2 & 6: Дерева & Погрози</a>
+      <a href="parts.html" class="chapter-link">💼 PARTS & Value Net</a>
+      <a href="ch5.html" class="chapter-link active">🎲 Розділ 5: Змішані & Готелі</a>
+      <a href="ch7.html" class="chapter-link">📢 Розділ 7: Сигнали & Скринінг</a>
+      <a href="practice.html" class="chapter-link" style="color:var(--accent-amber);">📝 Тренажер Задач</a>
+    </div>
+  </nav>
+
+  <main class="main-wrapper">
+    <div class="page-header">
+      <span class="page-badge">Тема 5 • Розділ 5 Dixit & Nalebuff</span>
+      <h1 class="page-title">Змішані стратегії, Ринкова конкуренція та Закриті торги</h1>
+      <p class="page-desc">
+        Коли в грі немає чистих рівноваг, вигідно бути непередбачуваним. Як бізнес змагається за ринки в різних містах (кейс карпатських готелів) та як вигравати в закритих будівельних тендерах.
+      </p>
+    </div>
+
+    <!-- Audio Podcast -->
+    <div class="chapter-audio-card">
+      <div class="audio-header">
+        <span class="audio-icon">🎧</span>
+        <div>
+          <h3 style="font-size:1.15rem; font-weight:700;">Подкаст: Розділ 5 «Вибір та випадковість» (Змішані стратегії)</h3>
+          <p style="color:var(--text-muted); font-size:0.85rem;">Avinash Dixit & Barry Nalebuff українською • 21 хв</p>
+        </div>
+      </div>
+      <audio controls style="width:100%; height:44px;">
+        <source src="audio/ch5.m4a" type="audio/mp4">
+        Ваш браузер не підтримує аудіо.
+      </audio>
+    </div>
+
+    <div class="content-grid">
+      <div>
+        <div class="card">
+          <h2 class="card-title">🎲 Коли потрібні Змішані стратегії (Mixed Strategies)</h2>
+          <div class="plain-concept-box emerald">
+            <h4>Навіщо рандомізувати свій вибір?</h4>
+            <p>
+              Якщо в грі ти завжди обираєш один і той самий варіант (чисту дію), уважний суперник підлаштується і покарає тебе (як воротар, що знає, в який кут нападник б'є пенальті).<br>
+              <b>Головний принцип змішаних стратегій:</b> ти обираєш ймовірності своїх дій так, щоб <b>супернику було абсолютно байдуже</b>, що обирати! Його очікуваний виграш від будь-якої дії стає однаковим.
+            </p>
+          </div>
+        </div>
+
+        <!-- Problems for Chapter 5 -->
+        <div class="card">
+          <h2 class="card-title">🎯 Задачі Притули до цієї теми</h2>
+
+          <!-- Task 5 -->
+          <div class="problem-item">
+            <div class="problem-title-row">
+              <span class="problem-title">Задача 5 • Готелі Карпат («Захар Беркут» vs «Вежа Ведмежа»)</span>
+              <span class="page-badge">Мідтерм</span>
+            </div>
+            <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:1rem;">
+              Змагання за туристів у 3 містах: <b>Київ (150 тис. грн)</b>, <b>Львів (90 тис. грн)</b>, <b>Одеса (72 тис. грн)</b>. Кожен готель може обрати лише 1 місто для реклами.
+            </p>
+            <div class="plain-concept-box amber" style="margin-bottom:1rem;">
+              <h4>Чому Київ — це домінантний вибір у симетричній грі (пункт a):</h4>
+              <p>
+                Київський ринок (150 тис.) настільки великий, що навіть якщо поділити його 50/50 з конкурентом (75 кожному), це приносить набагато більше, ніж забрати менші міста. Реклама в Києві суворо домінує Львів та Одесу!<br>
+                <b>Рівновага:</b> обидва готелі запускають рекламу в <b>Києві</b> з прибутками <b>(156, 156)</b>.
+              </p>
+            </div>
+
+            <div class="plain-concept-box purple" style="margin-bottom:1rem;">
+              <h4>Що змінює сильніший бренд «Вежа Ведмежа» (пункт b):</h4>
+              <p>
+                Якщо «Вежа Ведмежа» (ВВ) забирає 70% у випадку нічиєї або відсутності реклами, «Захару Беркуту» (ЗБ) стає невигідно воювати в Києві (він отримає лише 30% від 150 = 45). ЗБ відступає до <b>Львова</b> і забирає собі всі 90!<br>
+                <b>Оптимальні стратегії:</b> ВВ бере <b>Київ</b>, ЗБ бере <b>Львів</b>.
+              </p>
+            </div>
+
+            <div class="checker-box">
+              <label style="font-size:0.85rem; font-weight:700; display:block; margin-bottom:0.4rem;">
+                Яка оптимальна стратегія для обох готелів у пункті a (симетричний поділ)?
+              </label>
+              <div class="checker-inputs">
+                <input type="text" id="input_q5_sym" class="checker-input" placeholder="Введіть місто (наприклад: Київ)">
+                <button class="checker-btn" data-q="q5_sym">Перевірити</button>
+              </div>
+              <div id="feedback_q5_sym" class="checker-feedback"></div>
+            </div>
+          </div>
+
+          <!-- Task 6 -->
+          <div class="problem-item">
+            <div class="problem-title-row">
+              <span class="problem-title">Задача 6 • Будівництво готелів Big (15M) та Small (9M)</span>
+              <span class="page-badge">Мідтерм</span>
+            </div>
+            <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:1rem;">
+              Дві будівельні фірми подають закриті заявки. Кожна може обрати: <b>B</b> (заявка на Big), <b>S</b> (заявка на Small), або <b>C</b> (запропонувати співпрацю).
+            </p>
+            <div class="plain-concept-box emerald" style="margin-bottom:1rem;">
+              <h4>Покрокове розв'язання Притули:</h4>
+              <p>
+                1. <b>Викреслюємо співпрацю C:</b> C суворо домінується діями B та S (подати заявку завжди вигідніше, ніж погоджуватися на скромну частку співпраці).<br>
+                2. <b>Порівнюємо B та S:</b> Якщо суперник обере B, тобі вигідніше B (12 проти 9). Якщо суперник обере S, тобі знову вигідніше B (15 проти 12).<br>
+                3. Дія <b>B</b> є строго домінатною для обох!<br>
+                <b>Рівновага Неша:</b> обидві фірми подають на великий готель <b>(B, B)</b> і за правилом інвестора ділять обидва об'єкти 50/50 з виплатами <b>(12, 12)</b>!
+              </p>
+            </div>
+
+            <div class="checker-box">
+              <label style="font-size:0.85rem; font-weight:700; display:block; margin-bottom:0.4rem;">
+                Яку заявку подасть кожна фірма в рівновазі (B, S чи C)?
+              </label>
+              <div class="checker-inputs">
+                <input type="text" id="input_q6_bid" class="checker-input" placeholder="Введіть літеру (наприклад: B)">
+                <button class="checker-btn" data-q="q6_bid">Перевірити</button>
+              </div>
+              <div id="feedback_q6_bid" class="checker-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div>
+        <div class="card">
+          <h3 class="card-title">💡 Чекліст до тендерів та аукціонів</h3>
+          <ul style="padding-left:1.25rem; font-size:0.88rem; color:var(--text-muted); line-height:1.7;">
+            <li>Спершу завжди склади матрицю можливих результатів (3х3).</li>
+            <li>Перевір, чи є стратегії, які завжди приносять менше за інших (доміновані дії типу C). Сміливо викреслюй їх.</li>
+            <li>У залишеній матриці 2х2 знайди найкращі відповіді методом стрілочок.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>UCU Economics Midterm Hub • Підготовка до мідтерму Притули • Усі матеріали українською</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

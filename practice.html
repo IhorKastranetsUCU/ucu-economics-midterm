@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тренажер Задач та Перевірка Розв'язків — UCU Economics</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-group">
+        <div class="logo-badge">UCU ECON</div>
+        <div class="logo-text">
+          <h1>Midterm Prep Hub</h1>
+          <p>Курс 1028 • Ярослав Притула</p>
+        </div>
+      </a>
+      <button id="themeToggleBtn" class="doc-download-btn">☀️ Світла</button>
+    </div>
+  </header>
+
+  <nav class="chapter-nav-bar">
+    <div class="chapter-nav-container">
+      <a href="index.html" class="chapter-link">🏠 Головна</a>
+      <a href="ch4.html" class="chapter-link">🎯 Розділ 4: Матриці & Неш</a>
+      <a href="ch3.html" class="chapter-link">🤝 Розділ 3: Дилема в'язня</a>
+      <a href="ch2.html" class="chapter-link">🌲 Розділ 2 & 6: Дерева & Погрози</a>
+      <a href="parts.html" class="chapter-link">💼 PARTS & Value Net</a>
+      <a href="ch5.html" class="chapter-link">🎲 Розділ 5: Змішані & Готелі</a>
+      <a href="ch7.html" class="chapter-link">📢 Розділ 7: Сигнали & Скринінг</a>
+      <a href="practice.html" class="chapter-link active" style="color:var(--accent-amber);">📝 Тренажер Задач</a>
+    </div>
+  </nav>
+
+  <main class="main-wrapper">
+    <div class="page-header">
+      <span class="page-badge">Практичний блок • 100% Завдань курсу</span>
+      <h1 class="page-title">Тренажер Задач та Перевірка Розв'язків</h1>
+      <p class="page-desc">
+        Розв'яжи кожну задачу самостійно, впиши відповідь і отримай миттєву перевірку, або завантаж фото своєї чернетки, щоб звірити її з критеріями Притули.
+      </p>
+    </div>
+
+    <!-- Official PDF Download -->
+    <div class="docs-bar" style="background:rgba(59, 130, 246, 0.1); border-color:var(--p1-color);">
+      <div>
+        <h4 style="font-size:0.95rem; margin-bottom:0.2rem;">📥 Офіційний файл завдань курсу 1028:</h4>
+        <p style="font-size:0.82rem; color:var(--text-muted);">Завантаж оригінальний PDF від Ярослава Притули на свій пристрій</p>
+      </div>
+      <a href="docs/Game_theory_problems_week1-2_2026_to-solve.pdf" download class="doc-download-btn" style="margin-left:auto; background:var(--p1-color); color:white;">
+        ⬇️ Завантажити Game_theory_problems_to-solve.pdf
+      </a>
+    </div>
+
+    <!-- Task 1 -->
+    <div class="problem-item">
+      <div class="problem-title-row">
+        <span class="problem-title">Задача 1 • Гра Морка і Мінді (Mork & Mindy)</span>
+        <span class="page-badge">Одночасна матриця</span>
+      </div>
+      <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:0.75rem;">
+        Морк обирає A, B, C. Мінді обирає X, Y, Z. Матриця: A=(80,30; 0,20; 20,20), B=(85,15; 20,20; 5,5), C=(95,25; 5,25; 5,25).
+      </p>
+      <div class="checker-box">
+        <label style="font-size:0.85rem; font-weight:700; display:block; margin-bottom:0.4rem;">
+          1. Введіть Рівновагу Неша в чистих стратегіях:
+        </label>
+        <div class="checker-inputs">
+          <input type="text" id="input_q1_nash" class="checker-input" placeholder="Наприклад: (C, X)">
+          <button class="checker-btn" data-q="q1_nash">Перевірити</button>
+        </div>
+        <div id="feedback_q1_nash" class="checker-feedback"></div>
+      </div>
+    </div>
+
+    <!-- Task 2 -->
+    <div class="problem-item">
+      <div class="problem-title-row">
+        <span class="problem-title">Задача 2 • Спільне підприємство (Joint Venture)</span>
+        <span class="page-badge">Дилема в'язня & Grim Trigger</span>
+      </div>
+      <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:0.75rem;">
+        Effort проти No Effort. Виплати: (25,25), (50,0), (0,50), (10,10). Партнер грає Grim Trigger.
+      </p>
+      <div class="checker-box">
+        <label style="font-size:0.85rem; font-weight:700; display:block; margin-bottom:0.4rem;">
+          Яка максимальна процентна ставка r допускає співпрацю?
+        </label>
+        <div class="checker-inputs">
+          <input type="text" id="input_q2_rate" class="checker-input" placeholder="Введіть ставку (наприклад: 60%)">
+          <button class="checker-btn" data-q="q2_rate">Перевірити</button>
+        </div>
+        <div id="feedback_q2_rate" class="checker-feedback"></div>
+      </div>
+    </div>
+
+    <!-- Task 3 -->
+    <div class="problem-item">
+      <div class="problem-title-row">
+        <span class="problem-title">Задача 3 • Ресторан Макса і Саллі</span>
+        <span class="page-badge">Дерево гри</span>
+      </div>
+      <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:0.75rem;">
+        Макс викреслює один ресторан, Саллі обирає з двох залишених. Вподобання: Макс ($A > B > C$), Саллі ($B > A > C$).
+      </p>
+      <div class="checker-box">
+        <label style="font-size:0.85rem; font-weight:700; display:block; margin-bottom:0.4rem;">
+          Який ресторан оберуть за підігровою рівновагою (якщо Макс діє стратегічно)?
+        </label>
+        <div class="checker-inputs">
+          <input type="text" id="input_q3_strategic" class="checker-input" placeholder="Введіть A, B або C">
+          <button class="checker-btn" data-q="q3_strategic">Перевірити</button>
+        </div>
+        <div id="feedback_q3_strategic" class="checker-feedback"></div>
+      </div>
+    </div>
+
+    <!-- Task 4 -->
+    <div class="problem-item">
+      <div class="problem-title-row">
+        <span class="problem-title">Задача 4 • Матриця 3x3 та викреслювання (IESDS)</span>
+        <span class="page-badge">Домінування</span>
+      </div>
+      <div class="checker-box">
+        <label style="font-size:0.85rem; font-weight:700; display:block; margin-bottom:0.4rem;">
+          Введіть фінальну рівновагу після викреслення всіх домінованих стратегій:
+        </label>
+        <div class="checker-inputs">
+          <input type="text" id="input_q4_nash" class="checker-input" placeholder="Наприклад: (Down, Middle)">
+          <button class="checker-btn" data-q="q4_nash">Перевірити</button>
+        </div>
+        <div id="feedback_q4_nash" class="checker-feedback"></div>
+      </div>
+    </div>
+
+    <!-- Task 5 -->
+    <div class="problem-item">
+      <div class="problem-title-row">
+        <span class="problem-title">Задача 5 • Готелі «Захар Беркут» vs «Вежа Ведмежа»</span>
+        <span class="page-badge">Ринки міст</span>
+      </div>
+      <div class="checker-box">
+        <label style="font-size:0.85rem; font-weight:700; display:block; margin-bottom:0.4rem;">
+          Яке місто є домінантним вибором у пункті a (симетрична реклама)?
+        </label>
+        <div class="checker-inputs">
+          <input type="text" id="input_q5_sym" class="checker-input" placeholder="Київ, Львів чи Одеса?">
+          <button class="checker-btn" data-q="q5_sym">Перевірити</button>
+        </div>
+        <div id="feedback_q5_sym" class="checker-feedback"></div>
+      </div>
+    </div>
+
+    <!-- Task 6 -->
+    <div class="problem-item">
+      <div class="problem-title-row">
+        <span class="problem-title">Задача 6 • Тендер на готелі Big і Small</span>
+        <span class="page-badge">Sealed-bid</span>
+      </div>
+      <div class="checker-box">
+        <label style="font-size:0.85rem; font-weight:700; display:block; margin-bottom:0.4rem;">
+          Яку заявку подадуть фірми в рівновазі (B, S чи C)?
+        </label>
+        <div class="checker-inputs">
+          <input type="text" id="input_q6_bid" class="checker-input" placeholder="Введіть літеру: B, S чи C">
+          <button class="checker-btn" data-q="q6_bid">Перевірити</button>
+        </div>
+        <div id="feedback_q6_bid" class="checker-feedback"></div>
+      </div>
+    </div>
+
+    <!-- Task 7 -->
+    <div class="problem-item">
+      <div class="problem-title-row">
+        <span class="problem-title">Задача 7 • Обмін частками акцій (Equity Swap)</span>
+        <span class="page-badge">Вихід з дилеми</span>
+      </div>
+      <div class="checker-box">
+        <label style="font-size:0.85rem; font-weight:700; display:block; margin-bottom:0.4rem;">
+          Який мінімальний цілий відсоток акцій x% потрібен для збереження високої ціни?
+        </label>
+        <div class="checker-inputs">
+          <input type="text" id="input_q7_percent" class="checker-input" placeholder="Введіть відсоток (наприклад: 17%)">
+          <button class="checker-btn" data-q="q7_percent">Перевірити</button>
+        </div>
+        <div id="feedback_q7_percent" class="checker-feedback"></div>
+      </div>
+    </div>
+
+    <!-- Task 9 -->
+    <div class="problem-item">
+      <div class="problem-title-row">
+        <span class="problem-title">Задача 9 • Визначення стратегії за робочим визначенням</span>
+      </div>
+      <div class="checker-box">
+        <label style="font-size:0.85rem; font-weight:700; display:block; margin-bottom:0.4rem;">
+          Оберіть варіант (1, 2, 3 або 4):
+        </label>
+        <div class="checker-inputs">
+          <input type="text" id="input_q9_def" class="checker-input" placeholder="Введіть 1">
+          <button class="checker-btn" data-q="q9_def">Перевірити</button>
+        </div>
+        <div id="feedback_q9_def" class="checker-feedback"></div>
+      </div>
+    </div>
+
+    <!-- Task 10 -->
+    <div class="problem-item">
+      <div class="problem-title-row">
+        <span class="problem-title">Задача 10 • Монополіст British Airways vs Lufthansa</span>
+        <span class="page-badge">Credible Threat</span>
+      </div>
+      <div class="checker-box">
+        <label style="font-size:0.85rem; font-weight:700; display:block; margin-bottom:0.4rem;">
+          Чи є погроза British Airways розпочати цінову війну достовірною?
+        </label>
+        <div class="checker-inputs">
+          <input type="text" id="input_q10_threat" class="checker-input" placeholder="Так чи Ні?">
+          <button class="checker-btn" data-q="q10_threat">Перевірити</button>
+        </div>
+        <div id="feedback_q10_threat" class="checker-feedback"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>UCU Economics Midterm Hub • Підготовка до мідтерму Притули • Усі матеріали українською</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
